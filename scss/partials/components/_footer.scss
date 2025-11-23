@@ -1,0 +1,48 @@
+@use '../utilities/mixins';
+
+footer { /*----------↓↓ FOOTER ↓↓----------*/
+    @include mixins.flex(null, center, center);
+    background-color: #B690A1;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    border-radius: 80px;
+    gap: 30px;
+
+        .content-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            .p-footer {
+                font-size: 20px;
+                color: #6C043C;
+                margin: 0;
+            }
+        }
+
+        .container-img-footer {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            .imgs-footer {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                max-width: 60px;
+                height: 100%;
+                max-height: 60px;
+                margin: 0;
+                &:hover {
+                    transform: scale(1.06);  
+                }
+            }
+        }
+
+}/*-----------↑↑ FOOTER ↑↑----------*/
+
+
+
+

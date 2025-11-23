@@ -1,0 +1,7 @@
+//BASE
+@use './partials/base/reset';
+@use './partials/base/tipografia';
+
+// COMPONENTS
+@use './partials/components/header';
+@use './partials/components/footer';
