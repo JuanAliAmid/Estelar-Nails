@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- ANIMATE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- CSS -->
     <link rel="stylesheet" href="./styles/style.css">
     <title>Estelar Nails</title>
 </head>
@@ -13,7 +19,7 @@
         <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.html">
-                    <img src="../assets/logo-2.png" alt="logo-estelar-nails" class="logo"> <!--LOGO-->
+                    <img src="../assets/logo-2.png" alt="logo-estelar-nails" class="logo animate__animated animate__lightSpeedInLeft"> <!--LOGO-->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span><img src="./assets/menu-desple.png" class="navbar-svg" alt=""></span> <!--logo del desplegable-->
@@ -42,10 +48,10 @@
     </header> 
     
     <main > 
-        <h1>Tus uñas a la altura de tu vida</h1> 
-        <section class="content-inicio">
+        <h1 class="animate__animated animate__lightSpeedInLeft">Tus uñas a la altura de tu vida</h1> 
+        <section class="content-inicio" data-aos="flip-up">
             <div class="title-paragraph-inicio">
-                <h2 >Que cada detalle hable de vos</h2>
+                <h2>Que cada detalle hable de vos</h2>
 
                 <p>En <strong>Estelar Nails</strong> sabemos que unas uñas bien cuidadas pueden cambiar por completo la manera en que te sentís y te mostrás al mundo. Por eso, transformamos cada diseño en una experiencia personalizada, donde la creatividad, la técnica y el amor por lo que hacemos se unen para resaltar tu esencia.</p>
                 <p>Nos inspira la elegancia en los pequeños detalles: la armonía de los colores, la sutileza de los brillos y la precisión de cada trazo. Cada trabajo es único, pensado para reflejar tu personalidad, acompañarte en cada momento y hacerte brillar sin perder naturalidad.</p>
@@ -53,6 +59,19 @@
             
             </div> 
                 <img class="img-inicio" src="./assets/uñas-inicio.png" alt="imagen-inicio">
+        </section>
+
+         <section class="content-inicio" data-aos="flip-up" >
+
+            <img class="img-inicio" src="./assets/uñas-inicio2.webp" alt="imagen-inicio">
+            <div class="title-paragraph-inicio">
+                <h2 >Tu bienestar, nuestra prioridad</h2>
+
+                <p>En <strong>Estelar Nails</strong> trabajamos con productos premium y técnicas actualizadas para garantizarte uñas fuertes, duraderas y cuidadas en cada detalle.</p>
+                <p>Valoramos tu tiempo y tu comodidad, por eso cada turno se planifica para que vivas una experiencia relajada, personalizada y libre de apuros.</p>
+                <p>Nos enfocamos en la higiene, la seguridad y la calidad de cada herramienta. Porque unas uñas hermosas importan, pero tus manos merecen aún más: confianza, cuidado profesional y dedicación en cada sesión.</p>       
+            
+            </div> 
         </section>
     </main>
 
@@ -73,6 +92,12 @@
 
     </footer>
 
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- BOOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

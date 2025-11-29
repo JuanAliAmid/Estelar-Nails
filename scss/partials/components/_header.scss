@@ -1,13 +1,14 @@
   
 .navbar { /*----------↓↓ HEADER ↓↓----------*/
     padding: 0;
-    
+
     .container-fluid {
         display: flex;
         margin-top: 0;
         background-color: #B690A1;
         font-size: 20px;
         border-bottom: 3px solid #6C043C;
+        background-image: linear-gradient(to left, #92697c, #6e3a56);
 
         .logo {
             width: 100%;
@@ -33,18 +34,25 @@
             }    
 
             .nav-link {
-                color: #4A1C2C;
-                &:active,
+                color: #F7F0EB;
                 &:hover {
                     display: inline-block;
-                    transition: 0.1s;
-                    color: #6e0129;
+                    transition: 0.3s;
+                    color: #bbb2a5;
                     transform: scale(1.1);
                 }
             }
+            .nav-link.active {
+                color: #cebca3;
+                transform: scale(1.1);
+            }
+                    
+                
         }
-    }   
-}  /*----------↑↑ HEADER ↑↑----------*/
+    }
+}   /*----------↑↑ HEADER ↑↑----------*/
+
+  
 
 
 

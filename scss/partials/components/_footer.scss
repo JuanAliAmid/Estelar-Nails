@@ -7,8 +7,11 @@ footer { /*----------↓↓ FOOTER ↓↓----------*/
     max-width: 1000px;
     margin: 0 auto;
     margin-bottom: 15px;
-    border-radius: 80px;
+    border-radius: 20px;
+    border:solid 3px #6C043C;
     gap: 30px;
+    background-image: linear-gradient(to left, #af708b, #944d6d);
+
 
         .content-text {
             display: flex;
@@ -17,7 +20,7 @@ footer { /*----------↓↓ FOOTER ↓↓----------*/
             height: 100%;
             .p-footer {
                 font-size: 20px;
-                color: #6C043C;
+                color: #F7F0EB;
                 margin: 0;
             }
         }

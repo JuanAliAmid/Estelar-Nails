@@ -1,0 +1,21 @@
+@use '../utilities/variables';
+h1 {
+    margin-top: 10px;
+    font-size: variables.$main-size;
+    color: variables.$main-color;
+    text-align: center;
+}
+h2 {
+    color: #46092c;
+    font-size: variables.$main-size-h2;
+    transition: transform 0.2s;
+}
+h2:hover {
+    transform: scale(1.02);
+}
+
+p {
+    font-size: variables.$main-size-p;
+    font-weight: variables.$main-weight-p;
+}
+

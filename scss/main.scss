@@ -1,7 +1,18 @@
+//VARIABLES
+@use './partials/utilities/variables';
+
 //BASE
 @use './partials/base/reset';
 @use './partials/base/tipografia';
 
 // COMPONENTS
 @use './partials/components/header';
+@use './partials/layout/textos';
+@use './partials/components/cards';
 @use './partials/components/footer';
+@use './partials/components/bienvenida';
+@use './partials/components/formulario';
+@use './partials/components/general';
+
+// MEDIA QUARIS
+@use './partials/media-queries/responsive.scss';

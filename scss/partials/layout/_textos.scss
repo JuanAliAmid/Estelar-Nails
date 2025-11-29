@@ -1,0 +1,14 @@
+@use '../utilities/mixins';
+@use '../utilities/extend';
+
+.texto-tecnicas {  /*----------↓↓ NUESTROS TRABAJOS ↓↓----------*/
+    @include mixins.flex(column, center, center);
+    text-align: center;
+    height: 600px;
+    width: 100%;
+    max-width: 650px;
+    margin-top: 30px;
+    margin-left: 130px;
+    padding: 30px;
+    gap: 20px;
+} /*----------↑↑ NUESTROS TRABAJOS ↑↑----------*/

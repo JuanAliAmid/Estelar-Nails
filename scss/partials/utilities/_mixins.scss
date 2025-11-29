@@ -4,3 +4,18 @@
     justify-content: $justify;
     align-items: $align; 
 }
+
+@mixin img-style ($transition, $width, $height, $fit, $radius){
+    transition: $transition; 
+    width: $width;
+    height: $height;
+    object-fit: $fit;
+    border-radius: $radius;
+}
+
+@mixin width-height ($max, $height) {
+    width: 100%;
+    max-width: $max;
+    height: $height;
+}
+

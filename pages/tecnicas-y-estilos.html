@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- ANIMATE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- CSS -->
     <link rel="stylesheet" href="../styles/style.css">
     <title>Técnicas y Estilos</title>
 </head>
@@ -13,7 +19,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.html">
-                    <img src="../assets/logo-2.png" alt="logo-estelar-nails" class="logo"> <!--LOGO-->
+                    <img src="../assets/logo-2.png" alt="logo-estelar-nails" class="logo animate__animated animate__lightSpeedInLeft"> <!--LOGO-->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span><img src="../assets/menu-desple.png" class="navbar-svg" alt=""></span> <!--logo del desplegable-->
@@ -43,12 +49,12 @@
         
 
     <main> <!--contenido principal-->
-        <h1>El arte detrás de cada técnica</h1> <!--titulo principal-->
+        <h1 class="animate__animated animate__lightSpeedInLeft">El arte detrás de cada técnica</h1> <!--titulo principal-->
        
         <section class="contenedor-tye">
 
-            <article id="tecnicas-de-soft-gel" class="cont-img-tye "> <!--soft gel -->
-                <img class="imgs-tec-esti" src="../assets/soft-gel.png" alt="img-soft-gel" >
+            <article id="tecnicas-de-soft-gel" class="cont-img-tye " data-aos="fade-right"> <!--soft gel -->
+                <img class="imgs-tec-esti " src="../assets/soft-gel.png" alt="img-soft-gel" >
                 <div class="ol-tye">
                     <h3>Soft gel</h3>
                     <ol>
@@ -62,7 +68,7 @@
                 </div>
             </article>
 
-            <article id="tecnicas-de-semis" class="cont-img-tye"> <!--semis -->
+            <article id="tecnicas-de-semis" class="cont-img-tye" data-aos="fade-left"> <!--semis -->
                 <img class="imgs-tec-esti" src="../assets/semis.png" alt="img-semis" >
                 <div class="ol-tye">
                     <h3>Semis</h3>
@@ -78,7 +84,7 @@
                 </div>
             </article> 
 
-            <article id="tecnicas-de-capping" class="cont-img-tye"> <!--capping -->
+            <article id="tecnicas-de-capping" class="cont-img-tye" data-aos="fade-right"> <!--capping -->
                 <img class="imgs-tec-esti" src="../assets/capping.png" alt="img-capping" >
                 <div class="ol-tye">
                     <h3>Capping</h3>
@@ -95,7 +101,7 @@
                 </div>
             </article> 
 
-             <article id="tecnicas-de-cat-eye" class="cont-img-tye"> <!--cat eye -->
+             <article id="tecnicas-de-cat-eye" class="cont-img-tye" data-aos="fade-left"> <!--cat eye -->
                  <img class="imgs-tec-esti" src="../assets/cat-eye.png" alt="img-cat-eye" >
                 <div class="ol-tye">
                     <h3 >Cat eye</h3>
@@ -112,7 +118,7 @@
                 </div>
              </article> 
 
-             <article id="tecnicas-de-poly-gel" class="cont-img-tye "> <!--poly gel -->
+             <article id="tecnicas-de-poly-gel" class="cont-img-tye " data-aos="fade-right"> <!--poly gel -->
                  <img class="imgs-tec-esti" src="../assets/poly-gel.png" alt="img-poly-gel" >
                 <div class="ol-tye">
                     <h3>Poly gel</h3>
@@ -130,7 +136,7 @@
                 </div>
              </article> 
 
-            <article class="cont-img-tye"> <!--exfoliación e hidratación -->
+            <article class="cont-img-tye" data-aos="fade-left"> <!--exfoliación e hidratación -->
                  <img class="imgs-tye-pies" src="../assets/pies.png" alt="img-pies">
                 <div class="ol-tye">
                     <h3>Exfoliación e Hidratación de manos y pies</h3>
@@ -164,6 +170,13 @@
         </div>
 
     </footer>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- BOOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
