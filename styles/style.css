@@ -21,11 +21,16 @@ body {
   font-size: 20px;
   border-bottom: 3px solid #6C043C;
   background-image: linear-gradient(to left, #92697c, #6e3a56);
+  height: auto;
 }
 .navbar .container-fluid .logo {
   width: 100%;
   max-width: 150px;
   height: 90px;
+}
+.navbar .container-fluid .logo:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
 }
 .navbar .container-fluid .navbar-svg {
   width: 35px;
@@ -49,11 +54,11 @@ body {
 .navbar .container-fluid .navbar-nav .nav-link:hover {
   display: inline-block;
   transition: 0.3s;
-  color: #bbb2a5;
+  color: #fae7f0;
   transform: scale(1.1);
 }
 .navbar .container-fluid .navbar-nav .nav-link.active {
-  color: #cebca3;
+  color: #F2E2C4;
   transform: scale(1.1);
 }
 
@@ -103,8 +108,8 @@ h2 {
 }
 .contenedor-tye .cont-img-tye .imgs-tye-pies {
   width: 100%;
-  max-width: 280px;
-  height: 240px;
+  max-width: 230px;
+  height: 230px;
   object-fit: cover;
   border-radius: 30px;
 }
@@ -137,11 +142,12 @@ h2 {
   width: 100%;
   max-width: 800px;
   padding: 10px;
+  text-align: center;
 }
 .content-principal-servicios .content-uñas-rojas:hover {
   transform: scale(1.01); /* agranda al pasar el puntero */
   transition: 0.3s;
-  background-image: linear-gradient(to bottom, #F7F0EB, #f7dfce);
+  background-image: linear-gradient(to bottom, #F7F0EB, #fae7f0);
 }
 .content-principal-servicios .content-uñas-rojas .img-servicios-manos {
   width: 100%;
@@ -158,11 +164,12 @@ h2 {
   width: 100%;
   max-width: 800px;
   padding: 10px;
+  text-align: center;
 }
 .content-principal-servicios .content-pies:hover {
   transform: scale(1.01); /* agranda al pasar el puntero */
   transition: 0.3s;
-  background-image: linear-gradient(to bottom, #F7F0EB, #f7dfce);
+  background-image: linear-gradient(to bottom, #F7F0EB, #fae7f0);
 }
 .content-principal-servicios .content-pies .img-servicios-pies {
   width: 100%;
@@ -424,6 +431,7 @@ h2 {
   color: #46092c;
   font-size: 35px;
   transition: transform 0.2s;
+  text-align: center;
 }
 
 h2:hover {
@@ -436,6 +444,11 @@ p {
 }
 
 @media (max-width: 576px) {
+  .navbar .container-fluid .logo {
+    width: 100%;
+    max-width: 100px;
+    height: 80px;
+  }
   nav { /*↓↓nav↓↓*/
     display: flex;
     flex-direction: column;
@@ -540,6 +553,7 @@ p {
     max-width: 150px;
     height: 100%;
     max-height: 300px;
+    object-fit: center;
   }
   .content-principal-servicios .img-servicios-manos {
     width: 100%;
@@ -586,8 +600,8 @@ p {
   .contenedor-nt .contenedor-principal-imgs {
     margin: 0 auto;
     justify-content: center;
-    grid-template-columns: 170px 130px 130px;
-    grid-template-rows: 190px 190px;
+    grid-template-columns: 130px 100px 100px;
+    grid-template-rows: 160px 160px;
     margin-top: 0;
     border-radius: 15px;
   }

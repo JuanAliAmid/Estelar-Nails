@@ -9,11 +9,18 @@
         font-size: 20px;
         border-bottom: 3px solid #6C043C;
         background-image: linear-gradient(to left, #92697c, #6e3a56);
+        height: auto;
 
         .logo {
             width: 100%;
             max-width: 150px;
             height: 90px;
+            
+
+            &:hover {
+                transform: scale(1.1);
+                transition: transform 0.3s;
+            }
         }
         .navbar-svg {
             width: 35px;
@@ -38,12 +45,12 @@
                 &:hover {
                     display: inline-block;
                     transition: 0.3s;
-                    color: #bbb2a5;
+                    color: #fae7f0;
                     transform: scale(1.1);
                 }
             }
             .nav-link.active {
-                color: #cebca3;
+                color: #F2E2C4;
                 transform: scale(1.1);
             }
                     

@@ -9,6 +9,7 @@ h2 {
     color: #46092c;
     font-size: variables.$main-size-h2;
     transition: transform 0.2s;
+    text-align: center;
 }
 h2:hover {
     transform: scale(1.02);

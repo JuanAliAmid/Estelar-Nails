@@ -7,10 +7,16 @@
     @extend %h2-general;
 }
 @media (max-width: 576px) {
+    .navbar .container-fluid .logo {
+        width: 100%;
+        max-width: 100px;
+        height: 80px;
+    }
     nav {/*↓↓nav↓↓*/
         @include mixins.flex(column, center, center);
         width: 100%;
         height: auto;
+        
         ul {
             width: 100%;
             flex-wrap: wrap;
@@ -110,6 +116,7 @@
         .img-servicios-pies {
             @include mixins.width-height(150px, 100%);
             max-height: 300px;
+            object-fit: center;
         }
         .img-servicios-manos {
             @include mixins.width-height(300px, 100%);
@@ -150,8 +157,8 @@
         .contenedor-principal-imgs {
             margin: 0 auto;
             justify-content: center;
-            grid-template-columns: 170px 130px 130px;
-            grid-template-rows: 190px 190px;
+            grid-template-columns: 130px 100px 100px;
+            grid-template-rows: 160px 160px;
             margin-top: 0;
             border-radius: 15px;
             .imagenes-chicas3, .imagenes-chicas2, .imagenes-chicas1, .imagenes-chicas4, .imagen-grande {

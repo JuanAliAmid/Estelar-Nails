@@ -22,7 +22,7 @@
             border-radius: 30px;
         }
         .imgs-tye-pies {
-            @include mixins.width-height(280px, 240px);
+            @include mixins.width-height(230px, 230px);
             object-fit: cover;
             border-radius: 30px;
         }
@@ -52,10 +52,11 @@
         width: 100%;
         max-width: 800px;
         padding: 10px;
+        text-align: center;
          &:hover {
             transform: scale(1.01);  /* agranda al pasar el puntero */
             transition: 0.3s;
-            background-image: linear-gradient(to bottom, #F7F0EB, #f7dfce);
+            background-image: linear-gradient(to bottom, #F7F0EB, #fae7f0);
         }
         .img-servicios-manos {
             @include mixins.width-height(750px, 460px);
@@ -69,10 +70,11 @@
             width: 100%;
             max-width: 800px;
             padding: 10px;
+            text-align: center;
              &:hover {
                 transform: scale(1.01);  /* agranda al pasar el puntero */
                 transition: 0.3s;
-                background-image: linear-gradient(to bottom, #F7F0EB, #f7dfce);
+                background-image: linear-gradient(to bottom, #F7F0EB, #fae7f0);
             }
             .img-servicios-pies {
                 @include mixins.width-height(750px, 460px);
