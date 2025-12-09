@@ -49,8 +49,7 @@
         @include mixins.flex(column, null, center);
         border: 6px solid #4A1C2C;
         border-radius: 30px;
-        width: 100%;
-        max-width: 800px;
+        @include mixins.width-height(800px, null);
         padding: 10px;
         text-align: center;
          &:hover {
@@ -67,8 +66,7 @@
             @include mixins.flex(column, null, center);
             border: 6px solid #4A1C2C;
             border-radius: 30px;
-            width: 100%;
-            max-width: 800px;
+            @include mixins.width-height(800px, null);
             padding: 10px;
             text-align: center;
              &:hover {
@@ -81,7 +79,32 @@
                 border-radius: 30px;
             } 
         }
-}  /*-----------↑↑ SERVICIOS ↑↑----------*/
+
+}  
+.incluye-servicios{
+    @include mixins.flex(column, null, center);
+    gap: 10px;
+    margin: 10px;
+   
+    .bloque-servicios{
+        @include mixins.flex(column, center, center);   
+        text-align: center;
+        @include mixins.width-height(1400px, auto);
+        border: #4A1C2C solid 6px;
+        border-radius: 30px;
+        padding: 3px;
+        &:hover {
+            transform: scale(1.01);  
+            transition: 0.3s;
+            background-image: linear-gradient(to bottom, #F7F0EB, #fae7f0);
+        }
+    }
+    h3 {
+        border-bottom: #4A1C2C solid 2px;
+        border-radius: 5px;
+    }
+}
+/*-----------↑↑ SERVICIOS ↑↑----------*/
   
 
 

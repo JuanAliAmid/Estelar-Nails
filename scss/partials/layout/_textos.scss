@@ -4,11 +4,31 @@
 .texto-tecnicas {  /*----------↓↓ NUESTROS TRABAJOS ↓↓----------*/
     @include mixins.flex(column, center, center);
     text-align: center;
-    height: 600px;
-    width: 100%;
-    max-width: 650px;
+    @include mixins.width-height(650px, 600px);
     margin-top: 30px;
     margin-left: 130px;
     padding: 30px;
     gap: 20px;
-} /*----------↑↑ NUESTROS TRABAJOS ↑↑----------*/
+} 
+.guia-tecnica {
+    @include mixins.flex(column, null, center);
+    p {
+        text-align: center;
+        margin: 0 5px 0 5px;
+    }
+    ul {
+    
+        li {
+            list-style: none;
+            background: #f7f0eb;
+            padding: 10px 10px;
+            border-radius: 10px;
+            border-left: 4px solid #4A1C2C;
+            margin: 7px;
+            font-size: 18px;
+        }
+    }
+}
+/*----------↑↑ NUESTROS TRABAJOS ↑↑----------*/
+
+

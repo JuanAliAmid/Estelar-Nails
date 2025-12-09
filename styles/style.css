@@ -67,20 +67,57 @@ h2 {
   font-size: 30px;
 }
 
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+nav ul {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  gap: 5px;
+}
+
 .texto-tecnicas { /*----------↓↓ NUESTROS TRABAJOS ↓↓----------*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 600px;
   width: 100%;
   max-width: 650px;
+  height: 600px;
   margin-top: 30px;
   margin-left: 130px;
   padding: 30px;
   gap: 20px;
-} /*----------↑↑ NUESTROS TRABAJOS ↑↑----------*/
+}
+
+.guia-tecnica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.guia-tecnica p {
+  text-align: center;
+  margin: 0 5px 0 5px;
+}
+.guia-tecnica ul li {
+  list-style: none;
+  background: #f7f0eb;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border-left: 4px solid #4A1C2C;
+  margin: 7px;
+  font-size: 18px;
+}
+
+/*----------↑↑ NUESTROS TRABAJOS ↑↑----------*/
 .contenedor-tye { /*----------↓↓ TECNICAS Y ESTILOS ↓↓----------*/
   flex-wrap: wrap;
   display: grid;
@@ -176,6 +213,36 @@ h2 {
   max-width: 750px;
   height: 460px;
   border-radius: 30px;
+}
+
+.incluye-servicios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+}
+.incluye-servicios .bloque-servicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  border: #4A1C2C solid 6px;
+  border-radius: 30px;
+  padding: 3px;
+}
+.incluye-servicios .bloque-servicios:hover {
+  transform: scale(1.01);
+  transition: 0.3s;
+  background-image: linear-gradient(to bottom, #F7F0EB, #fae7f0);
+}
+.incluye-servicios h3 {
+  border-bottom: #4A1C2C solid 2px;
+  border-radius: 5px;
 }
 
 /*-----------↑↑ SERVICIOS ↑↑----------*/
@@ -443,29 +510,189 @@ p {
   font-weight: 400;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 375px) {
+  .navbar .container-fluid .logo {
+    width: 100%;
+    max-width: 100px;
+    height: 100%;
+    max-height: 80px;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    max-height: 90px;
+    gap: 2px;
+    padding: 5px;
+  }
+  footer .content-text {
+    display: flex;
+    place-items: center;
+  }
+  footer .content-text .p-footer {
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  footer .container-img-footer .imgs-footer {
+    width: 40px;
+    height: 40px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 20px;
+  }
+  main { /*----- ↓↓ HOME ↓↓ -----*/
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+  }
+  main .content-inicio {
+    width: 100%;
+    max-width: 370px;
+    height: auto;
+    text-align: center;
+    margin-top: 5px;
+  }
+  main .content-inicio .title-paragraph-inicio {
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+  }
+  main .content-inicio .img-inicio {
+    width: 320px;
+    height: 300px;
+    border-radius: 3000px;
+    margin: 5px;
+    border: 4px solid #6C043C;
+  }
+  /*----- ↑↑ HOME ↑↑ -----*/
+  .contenedor-tye { /*----- ↓↓ TECNICAS Y ESTILOS ↓↓ -----*/
+    display: grid;
+    grid-template-columns: 400px;
+    align-content: center;
+  }
+  .contenedor-tye .cont-img-tye {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 370px;
+  }
+  .contenedor-tye .cont-img-tye .ol-tye {
+    margin: 0 auto;
+  }
+  .contenedor-tye .cont-img-tye h3 {
+    text-align: center;
+  }
+  /*----- ↑↑ TECNICAS Y ESTILOS ↑↑ -----*/
+  .content-principal-servicios { /*----- ↓↓ SERVICIOS ↓↓ -----*/
+    flex-direction: column;
+    padding: 10px;
+    gap: 30px;
+  }
+  .content-principal-servicios .img-servicios-pies {
+    width: 100%;
+    max-width: 150px;
+    height: 100%;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  .content-principal-servicios .img-servicios-manos {
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  .content-principal-servicios .content-pies, .content-principal-servicios .content-uñas-rojas {
+    text-align: center;
+  }
+  .content-principal-servicios .incluye-servicios .bloque-servicios {
+    display: flex;
+    max-height: 250px;
+  }
+  .incluye-servicios .bloque-servicios p {
+    font-size: 20px;
+  }
+  /*----- ↑↑ SERVICIOS ↑↑ -----*/
+  .contenedor-nt { /*------ ↓↓ NUESTROS TRABAJOS ↓↓ -----*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+  }
+  .contenedor-nt .texto-tecnicas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    width: 95%;
+    height: auto;
+    font-size: 25px;
+    gap: 10px;
+  }
+  .contenedor-nt .contenedor-principal-imgs {
+    margin: 0 auto;
+    justify-content: center;
+    grid-template-columns: 130px 100px 100px;
+    grid-template-rows: 160px 160px;
+    margin-top: 0;
+    border-radius: 15px;
+  }
+  .contenedor-nt .contenedor-principal-imgs .imagenes-chicas3, .contenedor-nt .contenedor-principal-imgs .imagenes-chicas2, .contenedor-nt .contenedor-principal-imgs .imagenes-chicas1, .contenedor-nt .contenedor-principal-imgs .imagenes-chicas4, .contenedor-nt .contenedor-principal-imgs .imagen-grande {
+    border-radius: 15px;
+  }
+  .guia-tecnica p {
+    font-size: 20px;
+    margin: 3px 0 3px 0;
+  }
+  /*------ ↑↑ NUESTROS TRABAJOS ↑↑ ------*/
+  /*------ ↓↓ FORMULARIO ↓↓ ------*/
+  h2 {
+    margin-top: 5px;
+  }
+  .formulario {
+    flex-direction: column;
+  }
+  .formulario .content-de-contacto {
+    padding: 10px;
+  }
+  .formulario .content-de-contacto .p-formulario {
+    width: 100%;
+  }
+  .mapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 370px;
+    height: 350px;
+    padding: 5px;
+    border-radius: 20px;
+  }
+  .mapa iframe {
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    border-radius: 20px;
+  }
+  /*----- ↑↑ FORMULARIO ↑↑ -----*/
+}
+@media (min-width: 376px) and (max-width: 576px) {
   .navbar .container-fluid .logo {
     width: 100%;
     max-width: 100px;
     height: 80px;
   }
-  nav { /*↓↓nav↓↓*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-  }
-  nav ul {
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    font-size: 18px;
-    gap: 5px;
-  }
-  /*↑↑nav↑↑*/
   footer {
     display: flex;
     justify-content: center;
@@ -493,7 +720,7 @@ p {
   h1 {
     font-size: 40px;
   }
-  main { /*-----HOME-----*/
+  main { /*----- ↓↓ HOME ↓↓ -----*/
     display: flex;
     flex-direction: column;
     place-items: center;
@@ -503,7 +730,6 @@ p {
     max-width: 430px;
     height: auto;
     text-align: center;
-    justify-content: center;
     margin-top: 5px;
   }
   main .content-inicio .title-paragraph-inicio {
@@ -524,17 +750,18 @@ p {
     margin: 5px;
     border: 4px solid #6C043C;
   }
-  /*-----HOME-----*/
-  .contenedor-tye { /*-----TECNICAS Y ESTILOS-----*/
+  /*----- ↑↑ HOME ↑↑ -----*/
+  .contenedor-tye { /*----- ↓↓ TECNICAS Y ESTILOS ↓↓ -----*/
     display: grid;
     grid-template-columns: 400px;
     align-content: center;
   }
   .contenedor-tye .cont-img-tye {
-    width: 400px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 400px;
   }
   .contenedor-tye .cont-img-tye .ol-tye {
     margin: 0 auto;
@@ -542,8 +769,8 @@ p {
   .contenedor-tye .cont-img-tye h3 {
     text-align: center;
   }
-  /*-----TECNICAS Y ESTILOS-----*/
-  .content-principal-servicios { /*-----SERVICIOS-----*/
+  /*----- ↑↑ TECNICAS Y ESTILOS ↑↑ -----*/
+  .content-principal-servicios { /*----- ↓↓ SERVICIOS ↓↓ -----*/
     flex-direction: column;
     padding: 10px;
     gap: 30px;
@@ -553,7 +780,7 @@ p {
     max-width: 150px;
     height: 100%;
     max-height: 300px;
-    object-fit: center;
+    object-fit: cover;
   }
   .content-principal-servicios .img-servicios-manos {
     width: 100%;
@@ -568,11 +795,11 @@ p {
   .content-principal-servicios .content-pies p, .content-principal-servicios .content-uñas-rojas p {
     font-size: 20px;
   }
-  /*-----SERVICIOS-----*/
-  h2 { /*------NUESTROS TRABAJOS-----*/
-    font-size: 30px;
+  .incluye-servicios .bloque-servicios p {
+    font-size: 20px;
   }
-  .contenedor-nt {
+  /*----- ↑↑ SERVICIOS ↑↑ -----*/
+  .contenedor-nt { /*------ ↓↓ NUESTROS TRABAJOS ↓↓ -----*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -591,25 +818,25 @@ p {
     font-size: 25px;
     gap: 10px;
   }
-  .contenedor-nt .texto-tecnicas h2 {
-    font-size: 30px;
-  }
   .contenedor-nt .texto-tecnicas p {
     font-size: 20px;
   }
   .contenedor-nt .contenedor-principal-imgs {
     margin: 0 auto;
     justify-content: center;
-    grid-template-columns: 130px 100px 100px;
-    grid-template-rows: 160px 160px;
+    grid-template-columns: 170px 140px 140px;
+    grid-template-rows: 180px 180px;
     margin-top: 0;
     border-radius: 15px;
   }
   .contenedor-nt .contenedor-principal-imgs .imagenes-chicas3, .contenedor-nt .contenedor-principal-imgs .imagenes-chicas2, .contenedor-nt .contenedor-principal-imgs .imagenes-chicas1, .contenedor-nt .contenedor-principal-imgs .imagenes-chicas4, .contenedor-nt .contenedor-principal-imgs .imagen-grande {
     border-radius: 15px;
   }
-  /*------NUESTROS TRABAJOS------*/
-  /*------FORMULARIO------*/
+  .guia-tecnica p {
+    font-size: 20px;
+  }
+  /*------ ↑↑ NUESTROS TRABAJOS ↑↑ ------*/
+  /*------ ↓↓ FORMULARIO ↓↓ ------*/
   h2 {
     margin-top: 5px;
   }
@@ -638,7 +865,7 @@ p {
     margin: 5px;
     border-radius: 20px;
   }
-  /*-----FORMULARIO-----*/
+  /*----- ↑↑ FORMULARIO ↑↑ -----*/
 }
 @media (min-width: 577px) and (max-width: 768px) {
   nav { /*↓↓nav↓↓*/
@@ -682,8 +909,9 @@ p {
     margin-top: 5px;
   }
   main .content-inicio .title-paragraph-inicio {
+    display: flex;
     justify-content: center;
-    text-align: center;
+    align-items: center;
     padding: 5px;
   }
   main .content-inicio .title-paragraph-inicio p {
@@ -739,7 +967,10 @@ p {
     text-align: center;
   }
   .content-principal-servicios .content-pies p, .content-principal-servicios .content-uñas-rojas p {
-    font-size: 20px;
+    font-size: 24px;
+  }
+  .incluye-servicios .bloque-servicios p {
+    font-size: 24px;
   }
   /*----- ↑↑ SERVICIOS ↑↑ -----*/
   /*----- ↓↓ NUESTROS TRABAJOS ↓↓ -----*/
@@ -777,6 +1008,9 @@ p {
   .contenedor-nt .contenedor-principal-imgs .imagenes-chicas3, .contenedor-nt .contenedor-principal-imgs .imagenes-chicas2, .contenedor-nt .contenedor-principal-imgs .imagenes-chicas1, .contenedor-nt .contenedor-principal-imgs .imagenes-chicas4, .contenedor-nt .contenedor-principal-imgs .imagen-grande {
     border-radius: 30px;
   }
+  .guia-tecnica p {
+    font-size: 23px;
+  }
   /*----- ↑↑ NUESTROS TRABAJOS ↑↑ -----*/
   /*----- ↓↓ FORMULARIO ↓↓ -----*/
   .formulario {
@@ -795,7 +1029,7 @@ p {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 700px;
+    max-width: 730px;
     height: 500px;
     padding: 5px;
     border-radius: 20px;
@@ -901,7 +1135,10 @@ p {
     text-align: center;
   }
   .content-principal-servicios .content-pies p, .content-principal-servicios .content-uñas-rojas p {
-    font-size: 20px;
+    font-size: 24px;
+  }
+  .incluye-servicios .bloque-servicios p {
+    font-size: 24px;
   }
   /*----- ↑↑ SERVICIOS ↑↑ -----*/
   /*----- ↓↓ NUESTROS TRABAJOS ↓↓ -----*/
@@ -913,9 +1150,10 @@ p {
     width: 100%;
   }
   .contenedor-nt .texto-tecnicas {
-    margin: 0 auto;
-    align-items: center;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 0 auto;
     text-align: center;
     width: 100%;
     height: auto;
@@ -955,7 +1193,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 850px;
+    max-width: 800px;
     height: 550px;
     padding: 5px;
     border-radius: 20px;
@@ -1037,7 +1275,7 @@ p {
     text-align: center;
   }
   .content-principal-servicios .content-pies p, .content-principal-servicios .content-uñas-rojas p {
-    font-size: 20px;
+    font-size: 25px;
   }
   .content-principal-servicios .content-pies .img-servicios-pies, .content-principal-servicios .content-uñas-rojas .img-servicios-pies {
     height: 400px;
@@ -1049,6 +1287,9 @@ p {
     height: 400px;
     max-width: none;
     object-fit: cover;
+  }
+  .incluye-servicios .bloque-servicios p {
+    font-size: 25px;
   }
   /*----- ↑↑ SERVICIOS ↑↑ -----*/
   /*----- ↓↓ NUESTROS TRABAJOS ↓↓ -----*/
@@ -1064,10 +1305,10 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    text-align: center;
     width: 100%;
     height: auto;
+    margin: 0 auto;
+    text-align: center;
     gap: 10px;
   }
   .contenedor-nt .texto-tecnicas p {
@@ -1139,10 +1380,10 @@ p {
   /*----- ↓↓ HOME ↓↓ -----*/
   main .content-inicio {
     display: flex;
+    justify-content: space-around;
     width: 1300px;
     height: auto;
     text-align: center;
-    justify-content: space-around;
     margin-top: 5px;
   }
   main .content-inicio .title-paragraph-inicio {
@@ -1169,9 +1410,10 @@ p {
     align-content: center;
   }
   .contenedor-tye .cont-img-tye {
+    display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: start;
+    align-items: center;
     gap: 0;
     width: 1300px;
     height: 350px;
@@ -1202,19 +1444,19 @@ p {
     text-align: center;
   }
   .content-principal-servicios .content-pies p, .content-principal-servicios .content-uñas-rojas p {
-    font-size: 20px;
+    font-size: 25px;
   }
   .content-principal-servicios .content-pies .img-servicios-pies, .content-principal-servicios .content-uñas-rojas .img-servicios-pies {
-    height: 400px;
     width: 100%;
-    max-width: 770px;
+    height: 400px;
     object-fit: cover;
+    max-width: 770px;
   }
   .content-principal-servicios .content-pies .img-servicios-manos, .content-principal-servicios .content-uñas-rojas .img-servicios-manos {
-    height: 400px;
     width: 100%;
-    max-width: 770px;
+    height: 400px;
     object-fit: cover;
+    max-width: 770px;
   }
   /*----- ↑↑ SERVICIOS ↑↑ -----*/
   /*----- ↓↓ NUESTROS TRABAJOS ↓↓ -----*/
@@ -1245,6 +1487,9 @@ p {
     grid-template-rows: 270px 270px;
     margin: 30px;
     border-radius: 30px;
+  }
+  .guia-tecnica p {
+    font-size: 20px;
   }
   /*----- ↑↑ NUESTROS TRABAJOS ↑↑ -----*/
   /*----- ↓↓ FORMULARIO ↓↓ -----*/

@@ -3,34 +3,196 @@
 @use '../utilities/variables';
 
 
- h2 {
+h2 {
     @extend %h2-general;
 }
-@media (max-width: 576px) {
+nav {
+    @extend %nav-mobile;
+}
+@media (max-width: 375px) {
     .navbar .container-fluid .logo {
-        width: 100%;
-        max-width: 100px;
-        height: 80px;
+        @include mixins.width-height(100px, 100%);
+        max-height: 80px;
     }
-    nav {/*↓↓nav↓↓*/
-        @include mixins.flex(column, center, center);
-        width: 100%;
-        height: auto;
-        
-        ul {
-            width: 100%;
-            flex-wrap: wrap;
-            justify-content: center;
-            text-align: center;
-            font-size: 18px;
-            gap: 5px;
-        }
-    }/*↑↑nav↑↑*/
      footer {
         @include mixins.flex(null, center, center);
+        @include mixins.width-height(none, 100%);
+        max-height: 90px;
+        gap: 2px;
+        padding: 5px;
+        .content-text {
+            display: flex;
+            place-items: center;
+            .p-footer {
+                font-size: 13px;
+                text-align: center;
+                margin-bottom: 0;
+            } 
+        }
+        .container-img-footer {
+            .imgs-footer {
+                width: 40px;
+                height: 40px;
+            }   
+        }
+            
+    } 
+
+    h1 {
+        font-size: 30px;
+    }
+    p {
+        font-size: 20px;
+    }
+    main { /*----- ↓↓ HOME ↓↓ -----*/
+        @include mixins.flex(column, null, null);
+        place-items: center;
+
+       
+        .content-inicio {
+            @include mixins.width-height(370px, auto);
+            text-align: center;
+           
+            margin-top: 5px;
+
+            .title-paragraph-inicio {
+                justify-content: center;
+                text-align: center;
+                padding: 5px;
+                
+                
+            }
+                .img-inicio {
+                    @include mixins.img-style(null, 320px, 300px, null, 3000px);
+                    margin: 5px;
+                    border: 4px solid #6C043C;
+                }    
+            }
+    } /*----- ↑↑ HOME ↑↑ -----*/
+
+   
+    .contenedor-tye { /*----- ↓↓ TECNICAS Y ESTILOS ↓↓ -----*/
+        display: grid;
+        grid-template-columns: 400px;
+        align-content: center;
+
+            .cont-img-tye {
+                @include mixins.flex(column, center, center);
+                width: 370px;
+                .ol-tye {
+                    margin: 0 auto;
+                }
+                h3 {
+                    text-align: center;
+                }    
+            }
+    }  /*----- ↑↑ TECNICAS Y ESTILOS ↑↑ -----*/  
+    
+        
+    .content-principal-servicios { /*----- ↓↓ SERVICIOS ↓↓ -----*/
+        flex-direction: column;
+        padding: 10px;
+        gap: 30px;
+        .img-servicios-pies {
+            @include mixins.width-height(150px, 100%);
+            max-height: 300px;
+            object-fit: cover;
+        }
+        .img-servicios-manos {
+            @include mixins.width-height(300px, 100%);
+            max-height: 300px;
+            object-fit: cover; 
+        }
+        .content-pies, .content-uñas-rojas {
+            text-align: center;
+        }
+    .incluye-servicios{
+        .bloque-servicios{
+            display: flex;
+            max-height: 250px;
+        }
+    }
+    }  
+    .incluye-servicios {
+        .bloque-servicios {
+            p {
+                font-size: 20px;
+            }
+        }
+    }/*----- ↑↑ SERVICIOS ↑↑ -----*/
+
+        
+    
+    .contenedor-nt { /*------ ↓↓ NUESTROS TRABAJOS ↓↓ -----*/
+        @include mixins.flex(column, center, center);  
+        gap: 0;   
         width: 100%;
-        max-width: none;
-        height: 100%;
+        .texto-tecnicas {
+            @include mixins.flex(null, center, center);
+            margin: 0 auto;
+            text-align: center;
+            width: 95%;
+            height: auto;
+            font-size: 25px;
+            gap: 10px;
+        }
+        .contenedor-principal-imgs {
+            margin: 0 auto;
+            justify-content: center;
+            grid-template-columns: 130px 100px 100px;
+            grid-template-rows: 160px 160px;
+            margin-top: 0;
+            border-radius: 15px;
+            .imagenes-chicas3, .imagenes-chicas2, .imagenes-chicas1, .imagenes-chicas4, .imagen-grande {
+                border-radius: 15px;
+            }
+        }
+    } 
+    .guia-tecnica {
+        p{
+            font-size: 20px;
+            margin: 3px 0 3px 0;
+        }
+    } /*------ ↑↑ NUESTROS TRABAJOS ↑↑ ------*/
+
+    
+     /*------ ↓↓ FORMULARIO ↓↓ ------*/    
+    h2 {
+        margin-top: 5px;
+    }
+    .formulario {
+        flex-direction: column;
+        .content-de-contacto {
+            padding: 10px;
+            .p-formulario {
+                width: 100%;
+            }
+        }
+    }
+    .mapa {
+        @include mixins.flex(null, center, center);
+        @include mixins.width-height(370px, 350px);
+        padding: 5px;
+        border-radius: 20px;
+        iframe {
+            width: 100%;
+            height: 100%;
+            margin: 5px;
+            border-radius: 20px;
+        }
+    } /*----- ↑↑ FORMULARIO ↑↑ -----*/
+}
+
+
+
+
+@media (min-width: 376px) and (max-width: 576px) {
+    .navbar .container-fluid .logo {
+        @include mixins.width-height(100px, 80px);
+    }
+     footer {
+        @include mixins.flex(null, center, center);
+        @include mixins.width-height(none, 100%);
         max-height: 90px;
         gap: 2px;
         padding: 5px;
@@ -55,17 +217,14 @@
     h1 {
         font-size: 40px;
     }
-    main { /*-----HOME-----*/
+    main { /*----- ↓↓ HOME ↓↓ -----*/
         @include mixins.flex(column, null, null);
         place-items: center;
 
        
         .content-inicio {
-            width: 100%;
-            max-width: 430px;
-            height: auto;
+            @include mixins.width-height(430px, auto);
             text-align: center;
-            justify-content: center;
             margin-top: 5px;
 
             .title-paragraph-inicio {
@@ -85,20 +244,17 @@
                     border: 4px solid #6C043C;
                 }    
             }
-    } /*-----HOME-----*/
+    } /*----- ↑↑ HOME ↑↑ -----*/
 
    
-    .contenedor-tye { /*-----TECNICAS Y ESTILOS-----*/
+    .contenedor-tye { /*----- ↓↓ TECNICAS Y ESTILOS ↓↓ -----*/
         display: grid;
         grid-template-columns: 400px;
         align-content: center;
 
             .cont-img-tye {
-            width: 400px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
+                @include mixins.flex(column, center, center);
+                width: 400px;
                 .ol-tye {
                     margin: 0 auto;
                 }
@@ -106,17 +262,17 @@
                     text-align: center;
                 }    
             }
-    }  /*-----TECNICAS Y ESTILOS-----*/  
+    }  /*----- ↑↑ TECNICAS Y ESTILOS ↑↑ -----*/  
     
         
-    .content-principal-servicios { /*-----SERVICIOS-----*/
+    .content-principal-servicios { /*----- ↓↓ SERVICIOS ↓↓ -----*/
         flex-direction: column;
         padding: 10px;
         gap: 30px;
         .img-servicios-pies {
             @include mixins.width-height(150px, 100%);
             max-height: 300px;
-            object-fit: center;
+            object-fit: cover;
         }
         .img-servicios-manos {
             @include mixins.width-height(300px, 100%);
@@ -129,13 +285,17 @@
                 font-size: 20px;
             }
         }
-    }  /*-----SERVICIOS-----*/
+    }
+    .incluye-servicios {
+        .bloque-servicios {
+            p {
+                font-size: 20px;
+            }
+        }
+    }  /*----- ↑↑ SERVICIOS ↑↑ -----*/
 
         
-    h2 { /*------NUESTROS TRABAJOS-----*/
-        font-size: 30px;
-    }
-    .contenedor-nt {
+    .contenedor-nt { /*------ ↓↓ NUESTROS TRABAJOS ↓↓ -----*/
         @include mixins.flex(column, center, center);  
         gap: 0;   
         width: 100%;
@@ -147,9 +307,6 @@
             height: auto;
             font-size: 25px;
             gap: 10px;
-                h2 {
-                    font-size: 30px;
-                }
                 p {
                     font-size: 20px;
                 }
@@ -157,18 +314,24 @@
         .contenedor-principal-imgs {
             margin: 0 auto;
             justify-content: center;
-            grid-template-columns: 130px 100px 100px;
-            grid-template-rows: 160px 160px;
+            grid-template-columns: 170px 140px 140px;
+            grid-template-rows: 180px 180px;
             margin-top: 0;
             border-radius: 15px;
             .imagenes-chicas3, .imagenes-chicas2, .imagenes-chicas1, .imagenes-chicas4, .imagen-grande {
                 border-radius: 15px;
             }
         }
-    } /*------NUESTROS TRABAJOS------*/
+    } 
+    .guia-tecnica {
+        p{
+            font-size: 20px;
+        }
+    }
+    /*------ ↑↑ NUESTROS TRABAJOS ↑↑ ------*/
 
     
-     /*------FORMULARIO------*/    
+     /*------ ↓↓ FORMULARIO ↓↓ ------*/    
     h2 {
         margin-top: 5px;
     }
@@ -187,12 +350,11 @@
         padding: 5px;
         border-radius: 20px;
         iframe {
-            width: 100%;
-            height: 100%;
+            @include mixins.width-height(null, 100%);
             margin: 5px;
             border-radius: 20px;
         }
-    } /*-----FORMULARIO-----*/
+    } /*----- ↑↑ FORMULARIO ↑↑ -----*/
 }
 
 
@@ -230,8 +392,7 @@
             margin-top: 5px;
 
             .title-paragraph-inicio {
-                justify-content: center;
-                text-align: center;
+                @include mixins.flex(null, center, center);
                 padding: 5px;
                 p {
                     font-size: 20px;
@@ -286,10 +447,17 @@
         .content-pies, .content-uñas-rojas {
             text-align: center;
             p {
-                font-size: 20px;
+                font-size: 24px;
             }
         }
-    } 
+    }
+    .incluye-servicios {
+        .bloque-servicios {
+            p {
+                font-size: 24px;
+            }
+        }
+    }
     /*----- ↑↑ SERVICIOS ↑↑ -----*/
 
     /*----- ↓↓ NUESTROS TRABAJOS ↓↓ -----*/
@@ -322,6 +490,11 @@
             }
         }
     }
+    .guia-tecnica {
+        p{
+            font-size: 23px;
+        }
+    }
     /*----- ↑↑ NUESTROS TRABAJOS ↑↑ -----*/
 
      /*----- ↓↓ FORMULARIO ↓↓ -----*/
@@ -340,12 +513,11 @@
     }
     .mapa {
         @include mixins.flex (null, center, center);
-        @include mixins.width-height(700px, 500px);
+        @include mixins.width-height(730px, 500px);
         padding: 5px;
         border-radius: 20px;
         iframe {
-            width: 100%;
-            height: 100%;
+            @include mixins.width-height(null, 100%);
             margin: 5px;
             border-radius: 20px;
         }
@@ -440,7 +612,14 @@
         .content-pies, .content-uñas-rojas {
             text-align: center;
             p {
-                font-size: 20px;
+                font-size: 24px;
+            }
+        }
+    }
+    .incluye-servicios {
+        .bloque-servicios {
+            p {
+                font-size: 24px;
             }
         }
     } 
@@ -450,10 +629,9 @@
     .contenedor-nt {
         @include mixins.flex (column, center, center);  
         width: 100%;
-        .texto-tecnicas {   
-            margin: 0 auto;
-            align-items: center;
-            justify-content: center;
+        .texto-tecnicas { 
+            @include mixins.flex(null, center, center); 
+            margin: 0 auto; 
             text-align: center;
             width: 100%;
             height: auto;
@@ -493,7 +671,7 @@
     }
     .mapa {
         @include mixins.flex (null, center, center);
-        width: 850px;
+        max-width: 800px;
         height: 550px;
         padding: 5px;
         border-radius: 20px;
@@ -574,7 +752,7 @@
             max-width: 800px;
             text-align: center;
             p {
-                font-size: 20px;
+                font-size: 25px;
             }
             .img-servicios-pies {
                 height: 400px;
@@ -588,6 +766,13 @@
                 object-fit: cover;
             }
         }
+    }
+     .incluye-servicios {
+        .bloque-servicios {
+            p {
+                font-size: 25px;
+            }
+        }
     } 
     /*----- ↑↑ SERVICIOS ↑↑ -----*/
 
@@ -598,9 +783,9 @@
         width: 100%;
         .texto-tecnicas {
             @include mixins.flex(null, center, center);
+            @include mixins.width-height(null, auto);
             margin: 0 auto;
             text-align: center;  
-            @include mixins.width-height(null, auto);
             gap: 10px;
                 p {
                     font-size: 23px;
@@ -653,9 +838,7 @@
 @media (min-width: 1201px) and (max-width: 1400px) {
     footer {
         @include mixins.flex(null, center, center);
-        width: 100%;
-        max-width: 900px;
-        height: 100%;
+        @include mixins.width-height(900px, 100%);
         max-height: 90px;
         gap: 10px;
         .content-text {
@@ -678,11 +861,10 @@
     /*----- ↓↓ HOME ↓↓ -----*/
     main { 
         .content-inicio {
-            display: flex;
+            @include mixins.flex(null, space-around, null);
             width: 1300px;
             height: auto;
             text-align: center;
-            justify-content: space-around;
             margin-top: 5px;
 
             .title-paragraph-inicio {
@@ -709,9 +891,7 @@
         grid-template-columns: 1fr;
         align-content: center;
             .cont-img-tye {
-                flex-direction: row;
-                align-items: center;
-                justify-content: start;
+                @include mixins.flex(row, start, center);
                 gap: 0;
                 width: 1300px;
                 height: 350px;  
@@ -743,22 +923,18 @@
             max-width: 780px;
             text-align: center;
             p {
-                font-size: 20px;
+                font-size: 25px;
             }
              .img-servicios-pies {
-                height: 400px;
-                width: 100%;
+                @include mixins.img-style(null,100%, 400px, cover, null);
                 max-width: 770px;
-                object-fit: cover;
             }
             .img-servicios-manos {
-                height: 400px;
-                width: 100%;
+                @include mixins.img-style(null,100%, 400px, cover, null);               
                 max-width: 770px;
-                object-fit: cover;
             }
         }
-    } 
+    }
     /*----- ↑↑ SERVICIOS ↑↑ -----*/
 
     /*----- ↓↓ NUESTROS TRABAJOS ↓↓ -----*/
@@ -785,6 +961,11 @@
             border-radius: 30px;
         }
     }
+    .guia-tecnica {
+        p{
+            font-size: 20px;
+        }
+    }
     /*----- ↑↑ NUESTROS TRABAJOS ↑↑ -----*/
 
      /*----- ↓↓ FORMULARIO ↓↓ -----*/
@@ -807,8 +988,7 @@
         padding: 5px;
         border-radius: 20px;
         iframe {
-            width: 100%;
-            height: 100%;
+            @include mixins.width-height(null, 100%);
             margin: 5px;
             border-radius: 20px;
         }

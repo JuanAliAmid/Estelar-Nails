@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Cómo hacer uñas Soft Gel paso a paso, Capping de uñas para principiantes, Técnica de esmaltado Semipermanente en casa, Preparación de la uña natural para Capping, Guía completa de aplicación de Poly gel, Pasos para lograr efecto Cat Eye perfecto">
     <meta name="description" content="Mirá nuestros trabajos y descubrí diseños únicos creados con dedicación, precisión y creatividad. Uñas esculpidas, gel, semipermanente y nail art profesional realizado en Estelar Nails.">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- ANIMATE -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- BOOTSTRAP -->
@@ -13,7 +15,7 @@
     <link rel="stylesheet" href="../styles/style.css">
     <title>Nuestros Trabajos | Estelar Nails</title>
 </head>
-<body class="body-nuestros-trabajos">
+<body>
 
     <header>
         <nav class="navbar navbar-expand-lg">
@@ -82,7 +84,23 @@
 
                 </div>    
             </section>          
-        </div>       
+        </div>
+        
+        <section class="guia-tecnica">
+            <h2>¿No sabés qué técnica elegir?</h2>
+            <p>
+                Si tenés dudas sobre qué técnica se adapta mejor a vos, esta guía rápida te ayuda a orientarte.
+                Cada opción ofrece un resultado distinto según tu estilo, tus uñas y lo que estés buscando.
+            </p>
+
+            <ul>
+                <li data-aos="fade-left"><strong>Capping:</strong> Perfecto si ya tenés uñas largas y solo querés fortalecerlas sin agregar grosor extra.</li>
+                <li data-aos="fade-right"><strong>Soft Gel:</strong> Ideal si buscás un acabado natural, liviano y cómodo para todos los días.</li>
+                <li data-aos="fade-left"><strong>Cat Eye:</strong> Una opción moderna y llamativa, con efecto imán que resalta en cualquier diseño.</li>
+                <li data-aos="fade-right"><strong>Poly Gel:</strong> Recomendado si querés alargar tus uñas con un material resistente y flexible.</li>
+                <li data-aos="fade-left"><strong>Semis:</strong> La elección clásica: prolijo, delicado y con mantenimiento sencillo.</li>
+            </ul>
+        </section>
     </main>
 
     <footer>
@@ -101,6 +119,14 @@
         </div>
 
     </footer>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
