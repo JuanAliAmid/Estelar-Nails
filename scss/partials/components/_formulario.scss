@@ -3,6 +3,14 @@
 .h2-formulario { /*---------- ↓↓ FORMULARIO ↓↓ ----------*/
     text-align: center;
 }
+.presentación-formulario {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    p {
+        margin: 5px;
+    }
+}
 .formulario { 
     @include mixins.flex (row, space-around, center);
     margin: 30px;
@@ -12,16 +20,13 @@
 
             form {
                 @include mixins.flex (column, center, null);
-                width: 100%;
-                max-width: 350px;
-                height: 300px;
+                @include mixins.width-height(350px, 300px);
                 margin: 20px;
                 gap: 10px;
 
                 .contenedor-label {
                     @include mixins.flex (row, null, null);
-                    width: 100%;
-                    max-width: 350px;
+                    @include mixins.width-height(350px, null);        
 
                     label {
                         font-size: 20px;
@@ -35,9 +40,7 @@
                     }    
                 }
                 .boton-enviar {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    @include mixins.flex(null, center, center);
                     color: #F7F0EB;
                     border-radius: 10px;
                     font-size: 15px;
@@ -70,9 +73,7 @@
     border-radius: 30px;
 
     iframe {
-        width: 100%;
-        max-width: 1000px;
-        height: 550px;
+        @include mixins.width-height(1000px, 550px);
         border-radius: 30px;
     }
 } /*---------- ↑↑ FORMULARIO ↑↑ ----------*/

@@ -6,24 +6,21 @@ footer { /*----------↓↓ FOOTER ↓↓----------*/
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    margin-bottom: 15px;
     border-radius: 20px;
     border:solid 3px #6C043C;
     gap: 30px;
     background-image: linear-gradient(to left, #af708b, #944d6d);
-
-
-        .content-text {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            .p-footer {
-                font-size: 20px;
-                color: #F7F0EB;
-                margin: 0;
-            }
+    .content-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        .p-footer {
+            font-size: 20px;
+            color: #F7F0EB;
+            margin: 0;
         }
+    }
 
         .container-img-footer {
             display: flex;

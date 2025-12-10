@@ -92,28 +92,35 @@ nav ul {
   width: 100%;
   max-width: 650px;
   height: 600px;
-  margin-top: 30px;
-  margin-left: 130px;
+  margin: 30px auto 0 auto;
   padding: 30px;
   gap: 20px;
 }
 
 .guia-tecnica {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 10px;
 }
-.guia-tecnica p {
+.guia-tecnica .p-tecnica {
   text-align: center;
-  margin: 0 5px 0 5px;
+  margin: 0 4px 0 4px;
 }
-.guia-tecnica ul li {
+.guia-tecnica .ul-tecnica {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 0;
+  margin-left: 0;
+  gap: 8px;
+}
+.guia-tecnica .ul-tecnica li {
+  margin: 0 3px 0 3px;
+  text-align: center;
   list-style: none;
-  background: #f7f0eb;
-  padding: 10px 10px;
+  padding: 8px;
   border-radius: 10px;
   border-left: 4px solid #4A1C2C;
-  margin: 7px;
+  border-right: 4px solid #4A1C2C;
   font-size: 18px;
 }
 
@@ -320,7 +327,6 @@ footer { /*----------↓↓ FOOTER ↓↓----------*/
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  margin-bottom: 15px;
   border-radius: 20px;
   border: solid 3px #6C043C;
   gap: 30px;
@@ -410,6 +416,15 @@ footer .container-img-footer .imgs-footer:hover {
   text-align: center;
 }
 
+.presentación-formulario {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.presentación-formulario p {
+  margin: 5px;
+}
+
 .formulario {
   display: flex;
   flex-direction: row;
@@ -450,8 +465,8 @@ footer .container-img-footer .imgs-footer:hover {
 }
 .formulario .content-de-contacto form .boton-enviar {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   color: #F7F0EB;
   border-radius: 10px;
   font-size: 15px;
@@ -550,14 +565,15 @@ p {
   main { /*----- ↓↓ HOME ↓↓ -----*/
     display: flex;
     flex-direction: column;
-    place-items: center;
+    justify-content: center;
+    align-items: center;
   }
   main .content-inicio {
     width: 100%;
-    max-width: 370px;
+    max-width: 350px;
     height: auto;
     text-align: center;
-    margin-top: 5px;
+    margin: 5px;
   }
   main .content-inicio .title-paragraph-inicio {
     justify-content: center;
@@ -565,8 +581,8 @@ p {
     padding: 5px;
   }
   main .content-inicio .img-inicio {
-    width: 320px;
-    height: 300px;
+    width: 270px;
+    height: 270px;
     border-radius: 3000px;
     margin: 5px;
     border: 4px solid #6C043C;
@@ -582,7 +598,8 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 370px;
+    width: 100%;
+    max-width: 360px;
   }
   .contenedor-tye .cont-img-tye .ol-tye {
     margin: 0 auto;
@@ -641,19 +658,24 @@ p {
     gap: 10px;
   }
   .contenedor-nt .contenedor-principal-imgs {
-    margin: 0 auto;
+    display: grid;
+    box-sizing: border-box;
+    max-width: 100%;
     justify-content: center;
-    grid-template-columns: 130px 100px 100px;
+    grid-template-columns: 1.3fr 0.8fr 0.8fr;
     grid-template-rows: 160px 160px;
-    margin-top: 0;
+    margin: 0 2px 0 2px;
     border-radius: 15px;
   }
   .contenedor-nt .contenedor-principal-imgs .imagenes-chicas3, .contenedor-nt .contenedor-principal-imgs .imagenes-chicas2, .contenedor-nt .contenedor-principal-imgs .imagenes-chicas1, .contenedor-nt .contenedor-principal-imgs .imagenes-chicas4, .contenedor-nt .contenedor-principal-imgs .imagen-grande {
     border-radius: 15px;
   }
+  .guia-tecnica {
+    gap: 10px;
+  }
   .guia-tecnica p {
     font-size: 20px;
-    margin: 3px 0 3px 0;
+    margin: 3px 0 5px 0;
   }
   /*------ ↑↑ NUESTROS TRABAJOS ↑↑ ------*/
   /*------ ↓↓ FORMULARIO ↓↓ ------*/
@@ -674,7 +696,7 @@ p {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 370px;
+    max-width: 350px;
     height: 350px;
     padding: 5px;
     border-radius: 20px;
@@ -727,7 +749,7 @@ p {
   }
   main .content-inicio {
     width: 100%;
-    max-width: 430px;
+    max-width: 370px;
     height: auto;
     text-align: center;
     margin-top: 5px;
@@ -744,8 +766,8 @@ p {
     font-size: 20px;
   }
   main .content-inicio .img-inicio {
-    width: 350px;
-    height: 350px;
+    width: 295px;
+    height: 295px;
     border-radius: 3000px;
     margin: 5px;
     border: 4px solid #6C043C;
@@ -753,7 +775,7 @@ p {
   /*----- ↑↑ HOME ↑↑ -----*/
   .contenedor-tye { /*----- ↓↓ TECNICAS Y ESTILOS ↓↓ -----*/
     display: grid;
-    grid-template-columns: 400px;
+    grid-template-columns: 1fr;
     align-content: center;
   }
   .contenedor-tye .cont-img-tye {
@@ -761,7 +783,8 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 400px;
+    width: 100%;
+    max-width: 350px;
   }
   .contenedor-tye .cont-img-tye .ol-tye {
     margin: 0 auto;
@@ -822,15 +845,22 @@ p {
     font-size: 20px;
   }
   .contenedor-nt .contenedor-principal-imgs {
+    display: grid;
+    box-sizing: border-box;
     margin: 0 auto;
     justify-content: center;
-    grid-template-columns: 170px 140px 140px;
+    grid-template-columns: 1.2fr 1fr 1fr;
     grid-template-rows: 180px 180px;
-    margin-top: 0;
+    margin: 2px;
     border-radius: 15px;
+    width: 100%;
+    max-width: 360px;
   }
   .contenedor-nt .contenedor-principal-imgs .imagenes-chicas3, .contenedor-nt .contenedor-principal-imgs .imagenes-chicas2, .contenedor-nt .contenedor-principal-imgs .imagenes-chicas1, .contenedor-nt .contenedor-principal-imgs .imagenes-chicas4, .contenedor-nt .contenedor-principal-imgs .imagen-grande {
+    width: 100%;
+    height: 100%;
     border-radius: 15px;
+    object-fit: cover;
   }
   .guia-tecnica p {
     font-size: 20px;
@@ -854,7 +884,7 @@ p {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 500px;
+    max-width: 360px;
     height: 400px;
     padding: 5px;
     border-radius: 20px;
@@ -1176,6 +1206,19 @@ p {
     margin-top: 0;
     border-radius: 30px;
   }
+  .guia-tecnica {
+    gap: 10px;
+  }
+  .guia-tecnica p {
+    font-size: 20px;
+    margin: 3px 0 5px 0;
+  }
+  .guia-tecnica ul li {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    height: 60px;
+  }
   /*----- ↑↑ NUESTROS TRABAJOS ↑↑ -----*/
   /*----- ↓↓ FORMULARIO ↓↓ -----*/
   .formulario {
@@ -1488,8 +1531,18 @@ p {
     margin: 30px;
     border-radius: 30px;
   }
+  .guia-tecnica {
+    gap: 10px;
+  }
   .guia-tecnica p {
     font-size: 20px;
+    margin: 5px;
+  }
+  .guia-tecnica ul li {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    height: 60px;
   }
   /*----- ↑↑ NUESTROS TRABAJOS ↑↑ -----*/
   /*----- ↓↓ FORMULARIO ↓↓ -----*/

@@ -37,7 +37,6 @@ nav {
         }
             
     } 
-
     h1 {
         font-size: 30px;
     }
@@ -45,29 +44,22 @@ nav {
         font-size: 20px;
     }
     main { /*----- ↓↓ HOME ↓↓ -----*/
-        @include mixins.flex(column, null, null);
-        place-items: center;
-
-       
+        @include mixins.flex(column, center, center);
         .content-inicio {
-            @include mixins.width-height(370px, auto);
+            @include mixins.width-height(350px, auto);
             text-align: center;
-           
-            margin-top: 5px;
-
+            margin: 5px;
             .title-paragraph-inicio {
                 justify-content: center;
                 text-align: center;
-                padding: 5px;
-                
-                
+                padding: 5px;     
             }
-                .img-inicio {
-                    @include mixins.img-style(null, 320px, 300px, null, 3000px);
-                    margin: 5px;
-                    border: 4px solid #6C043C;
-                }    
-            }
+            .img-inicio {
+                @include mixins.img-style(null, 270px, 270px, null, 3000px);
+                margin: 5px;
+                border: 4px solid #6C043C;
+            }    
+        }
     } /*----- ↑↑ HOME ↑↑ -----*/
 
    
@@ -75,17 +67,16 @@ nav {
         display: grid;
         grid-template-columns: 400px;
         align-content: center;
-
-            .cont-img-tye {
-                @include mixins.flex(column, center, center);
-                width: 370px;
-                .ol-tye {
-                    margin: 0 auto;
-                }
-                h3 {
-                    text-align: center;
-                }    
+        .cont-img-tye {
+            @include mixins.flex(column, center, center);
+            @include mixins.width-height(360px, null);
+            .ol-tye {
+                margin: 0 auto;
             }
+            h3 {
+                text-align: center;
+            }    
+        }
     }  /*----- ↑↑ TECNICAS Y ESTILOS ↑↑ -----*/  
     
         
@@ -137,11 +128,13 @@ nav {
             gap: 10px;
         }
         .contenedor-principal-imgs {
-            margin: 0 auto;
+            display: grid;
+            box-sizing: border-box;
+            max-width: 100%;
             justify-content: center;
-            grid-template-columns: 130px 100px 100px;
+            grid-template-columns: 1.3fr 0.8fr 0.8fr;
             grid-template-rows: 160px 160px;
-            margin-top: 0;
+            margin: 0 2px 0 2px;
             border-radius: 15px;
             .imagenes-chicas3, .imagenes-chicas2, .imagenes-chicas1, .imagenes-chicas4, .imagen-grande {
                 border-radius: 15px;
@@ -149,9 +142,10 @@ nav {
         }
     } 
     .guia-tecnica {
+        gap: 10px;
         p{
             font-size: 20px;
-            margin: 3px 0 3px 0;
+            margin: 3px 0 5px 0;
         }
     } /*------ ↑↑ NUESTROS TRABAJOS ↑↑ ------*/
 
@@ -171,12 +165,11 @@ nav {
     }
     .mapa {
         @include mixins.flex(null, center, center);
-        @include mixins.width-height(370px, 350px);
+        @include mixins.width-height(350px, 350px);
         padding: 5px;
         border-radius: 20px;
         iframe {
-            width: 100%;
-            height: 100%;
+            @include mixins.width-height(null, 100%);
             margin: 5px;
             border-radius: 20px;
         }
@@ -190,7 +183,7 @@ nav {
     .navbar .container-fluid .logo {
         @include mixins.width-height(100px, 80px);
     }
-     footer {
+    footer {
         @include mixins.flex(null, center, center);
         @include mixins.width-height(none, 100%);
         max-height: 90px;
@@ -220,13 +213,10 @@ nav {
     main { /*----- ↓↓ HOME ↓↓ -----*/
         @include mixins.flex(column, null, null);
         place-items: center;
-
-       
         .content-inicio {
-            @include mixins.width-height(430px, auto);
+            @include mixins.width-height(370px, auto);
             text-align: center;
             margin-top: 5px;
-
             .title-paragraph-inicio {
                 justify-content: center;
                 text-align: center;
@@ -238,30 +228,29 @@ nav {
                     font-size: 20px;
                 }
             }
-                .img-inicio {
-                    @include mixins.img-style(null, 350px, 350px, null, 3000px);
-                    margin: 5px;
-                    border: 4px solid #6C043C;
-                }    
-            }
+            .img-inicio {
+                @include mixins.img-style(null, 295px, 295px, null, 3000px);
+                margin: 5px;
+                border: 4px solid #6C043C;
+            }    
+        }
     } /*----- ↑↑ HOME ↑↑ -----*/
 
    
     .contenedor-tye { /*----- ↓↓ TECNICAS Y ESTILOS ↓↓ -----*/
         display: grid;
-        grid-template-columns: 400px;
+        grid-template-columns: 1fr;
         align-content: center;
-
-            .cont-img-tye {
-                @include mixins.flex(column, center, center);
-                width: 400px;
-                .ol-tye {
-                    margin: 0 auto;
-                }
-                h3 {
-                    text-align: center;
-                }    
+        .cont-img-tye {
+            @include mixins.flex(column, center, center);
+            @include mixins.width-height(350px, null);
+            .ol-tye {
+                margin: 0 auto;
             }
+            h3 {
+                text-align: center;
+            }    
+        }
     }  /*----- ↑↑ TECNICAS Y ESTILOS ↑↑ -----*/  
     
         
@@ -307,19 +296,24 @@ nav {
             height: auto;
             font-size: 25px;
             gap: 10px;
-                p {
-                    font-size: 20px;
-                }
+            p {
+                font-size: 20px;
+            }
         }
         .contenedor-principal-imgs {
+            display: grid;
+            box-sizing: border-box;
             margin: 0 auto;
             justify-content: center;
-            grid-template-columns: 170px 140px 140px;
+            grid-template-columns: 1.2fr 1fr 1fr;
             grid-template-rows: 180px 180px;
-            margin-top: 0;
+            margin: 2px;
             border-radius: 15px;
+            @include mixins.width-height(360px, null);
             .imagenes-chicas3, .imagenes-chicas2, .imagenes-chicas1, .imagenes-chicas4, .imagen-grande {
+                @include mixins.width-height(null, 100%);
                 border-radius: 15px;
+                object-fit: cover;
             }
         }
     } 
@@ -346,7 +340,7 @@ nav {
     }
     .mapa {
         @include mixins.flex(null, center, center);
-        @include mixins.width-height(500px, 400px);
+        @include mixins.width-height(360px, 400px);
         padding: 5px;
         border-radius: 20px;
         iframe {
@@ -384,13 +378,11 @@ nav {
     main {
         @include mixins.flex(column, null, null);
         place-items: center;  
-
         .content-inicio {
             @include mixins.flex(null, center, center);
             @include mixins.width-height(600px, auto);
             text-align: center;
             margin-top: 5px;
-
             .title-paragraph-inicio {
                 @include mixins.flex(null, center, center);
                 padding: 5px;
@@ -398,12 +390,12 @@ nav {
                     font-size: 20px;
                 }
             }
-                .img-inicio {
-                    @include mixins.img-style(null, 400px, 400px, null, 3000px);
-                    margin: 5px;
-                    border: 4px solid #6C043C;
-                }    
-            }
+            .img-inicio {
+                @include mixins.img-style(null, 400px, 400px, null, 3000px);
+                margin: 5px;
+                border: 4px solid #6C043C;
+            }    
+        }
     } 
     /*----- ↑↑ HOME ↑↑ -----*/
 
@@ -412,21 +404,19 @@ nav {
         display: grid;
         grid-template-columns: 400px;
         align-content: center;
-
-            .cont-img-tye {
+        .cont-img-tye {
             @include mixins.flex(row, center, center);
             width: 700px;
             height: auto;
-                .ol-tye {
-                    font-size: 18px;
-                    
-                }
-                h3 {
-                    text-align: center;
-                    font-size: 20px;
-                    font-weight: 700;
-                }    
+            .ol-tye {
+                font-size: 18px;        
             }
+            h3 {
+                text-align: center;
+                font-size: 20px;
+                font-weight: 700;
+            }    
+        }
     } 
     /*----- ↑↑ TECNICAS Y ESTILOS ↑↑ -----*/
 
@@ -473,9 +463,9 @@ nav {
             height: auto;
             font-size: 25px;
             gap: 10px;
-                p {
-                    font-size: 23px;
-                }
+            p {
+                font-size: 23px;
+            }
         }
         .contenedor-principal-imgs {
             margin: 0 auto;
@@ -506,8 +496,7 @@ nav {
             width: 500px;          
             padding: 10px;
             .p-formulario {
-                width: 100%;
-                
+                width: 100%;       
             }
         }
     }
@@ -567,12 +556,12 @@ nav {
                     font-size: 20px;
                 }
             }
-                .img-inicio {
-                    @include mixins.img-style (null, 400px, 400px, null, 3000px);
-                    margin: 5px;
-                    border: 4px solid #6C043C;
-                }    
-            }
+            .img-inicio {
+                @include mixins.img-style (null, 400px, 400px, null, 3000px);
+                margin: 5px;
+                border: 4px solid #6C043C;
+            }    
+        }
     } 
     /*----- ↑↑ HOME ↑↑ -----*/
 
@@ -581,18 +570,17 @@ nav {
         display: grid;
         grid-template-columns: 400px;
         align-content: center;
-
-            .cont-img-tye {
-                @include mixins.flex(row, center, center);
-                width: 850px;
-                .ol-tye {
-                    margin: 0 auto;
-                    font-size: 18px;
-                }
-                h3 {
-                    text-align: center;
-                }    
+        .cont-img-tye {
+            @include mixins.flex(row, center, center);
+            width: 850px;
+            .ol-tye {
+                margin: 0 auto;
+                font-size: 18px;
             }
+            h3 {
+                text-align: center;
+            }    
+        }
     } 
     /*----- ↑↑ TECNICAS Y ESTILOS ↑↑ -----*/
 
@@ -637,12 +625,12 @@ nav {
             height: auto;
             font-size: 25px;
             gap: 10px;
-                h2 {
-                    font-size: 30px;
-                }
-                p {
-                    font-size: 23px;
-                }
+            h2 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 23px;
+            }
         }
         .contenedor-principal-imgs {
             margin: 0 auto;
@@ -652,6 +640,19 @@ nav {
             grid-template-rows: 250px 250px;
             margin-top: 0;
             border-radius: 30px;
+        }
+    }
+    .guia-tecnica {
+        gap: 10px;
+        p{
+            font-size: 20px;
+            margin: 3px 0 5px 0;
+        }
+        ul li {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            height: 60px;
         }
     }
     /*----- ↑↑ NUESTROS TRABAJOS ↑↑ -----*/
@@ -699,7 +700,6 @@ nav {
             @include mixins.width-height(900px, auto);
             text-align: center;
             margin-top: 5px;
-
             .title-paragraph-inicio {
                 justify-content: center;
                 text-align: center;
@@ -708,12 +708,12 @@ nav {
                     font-size: 20px;
                 }
             }
-                .img-inicio {
-                    @include mixins.img-style(null, 400px, 400px, null, 3000px);
-                    margin: 5px;
-                    border: 4px solid #6C043C;
-                }    
-            }
+            .img-inicio {
+                @include mixins.img-style(null, 400px, 400px, null, 3000px);
+                margin: 5px;
+                border: 4px solid #6C043C;
+            }    
+        }
     } 
     /*----- ↑↑ HOME ↑↑ -----*/
 
@@ -722,23 +722,22 @@ nav {
         display: grid;
         grid-template-columns: 400px;
         align-content: center;
-
-            .cont-img-tye {
-                @include mixins.flex(row, center, center);
-                height: auto;
-                width: 990px;
-                .imgs-tec-esti {
-                    max-width: 250px;
-                    height: 280px;
-                }       
-                .ol-tye {
-                    margin: 0 auto;
-                    font-size: 20px;
-                }
-                h3 {
-                    text-align: center;
-                }    
+        .cont-img-tye {
+            @include mixins.flex(row, center, center);
+            height: auto;
+            width: 990px;
+            .imgs-tec-esti {
+                max-width: 250px;
+                height: 280px;
+            }       
+            .ol-tye {
+                margin: 0 auto;
+                font-size: 20px;
             }
+            h3 {
+                text-align: center;
+            }    
+        }
     } 
     /*----- ↑↑ TECNICAS Y ESTILOS ↑↑ -----*/
 
@@ -747,7 +746,6 @@ nav {
         display: flex;
         padding: 10px;
         gap: 30px;
-        
         .content-pies, .content-uñas-rojas {
             max-width: 800px;
             text-align: center;
@@ -787,9 +785,9 @@ nav {
             margin: 0 auto;
             text-align: center;  
             gap: 10px;
-                p {
-                    font-size: 23px;
-                }
+            p {
+                font-size: 23px;
+            }
         }
         .contenedor-principal-imgs {
             margin: 0 auto;
@@ -866,7 +864,6 @@ nav {
             height: auto;
             text-align: center;
             margin-top: 5px;
-
             .title-paragraph-inicio {
                 justify-content: center;
                 text-align: center;
@@ -876,12 +873,12 @@ nav {
                     font-size: 20px;
                 }
             }
-                .img-inicio {
-                    @include mixins.img-style (null, 500px, 500px, null, 3000px);
-                    margin: 5px;
-                    border: 4px solid #6C043C;
-                }    
-            }
+            .img-inicio {
+                @include mixins.img-style (null, 500px, 500px, null, 3000px);
+                margin: 5px;
+                border: 4px solid #6C043C;
+            }    
+        }
     } 
     /*----- ↑↑ HOME ↑↑ -----*/
 
@@ -890,26 +887,26 @@ nav {
         display: grid;
         grid-template-columns: 1fr;
         align-content: center;
-            .cont-img-tye {
-                @include mixins.flex(row, start, center);
-                gap: 0;
-                width: 1300px;
-                height: 350px;  
-                .imgs-tec-esti{
-                    max-width: 290px;
-                    height: 290px;
-                }
-                .imgs-tye-pies {
-                    height: 300px;
-                }
-                .ol-tye {
-                    font-size: 20px;
-                    text-align: start;
-                }
-                h3 {
-                    text-align: center;
-                }    
+        .cont-img-tye {
+            @include mixins.flex(row, start, center);
+            gap: 0;
+            width: 1300px;
+            height: 350px;  
+            .imgs-tec-esti{
+                max-width: 290px;
+                height: 290px;
             }
+            .imgs-tye-pies {
+                height: 300px;
+            }
+            .ol-tye {
+                font-size: 20px;
+                text-align: start;
+            }
+            h3 {
+                text-align: center;
+            }    
+        }
     } 
     /*----- ↑↑ TECNICAS Y ESTILOS ↑↑ -----*/
 
@@ -917,8 +914,7 @@ nav {
     .content-principal-servicios {
         flex-direction: row;
         padding: 10px;
-        gap: 30px;
-       
+        gap: 30px;  
         .content-pies, .content-uñas-rojas {
             max-width: 780px;
             text-align: center;
@@ -940,16 +936,15 @@ nav {
     /*----- ↓↓ NUESTROS TRABAJOS ↓↓ -----*/
     .contenedor-nt {
         @include mixins.flex (row, space-around, center);
-
         .texto-tecnicas {
             @include mixins.flex(column, center, center); 
             text-align: center;
             width: 100%;
             margin: 0 auto;
             gap: 10px;
-                p {
-                    font-size: 20px;
-                }
+            p {
+                font-size: 20px;
+            }
         }
         .contenedor-principal-imgs {
             margin: 0 auto;
@@ -962,8 +957,16 @@ nav {
         }
     }
     .guia-tecnica {
+        gap: 10px;
         p{
             font-size: 20px;
+            margin: 5px;
+        }
+        ul li {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            height: 60px;
         }
     }
     /*----- ↑↑ NUESTROS TRABAJOS ↑↑ -----*/
@@ -976,8 +979,7 @@ nav {
             width: 500px;          
             padding: 10px;
             .p-formulario {
-                width: 100%;
-                
+                width: 100%;  
             }
         }
     }
