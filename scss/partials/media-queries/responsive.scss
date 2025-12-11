@@ -3,11 +3,6 @@
 @use '../utilities/variables';
 
 
-
-
-* {
-    border: 1px solid red;
-}
 h2 {
     @extend %h2-general;
 }
@@ -398,6 +393,7 @@ nav {
             @include mixins.flex(null, center, center);
             @include mixins.width-height(600px, auto);
             text-align: center;
+            margin: 15px 0 15px 0;
             .title-paragraph-inicio {
                 @include mixins.flex(null, center, center);
                 padding: 5px;

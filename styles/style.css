@@ -525,10 +525,6 @@ p {
   font-weight: 400;
 }
 
-* {
-  border: 1px solid red;
-}
-
 @media (max-width: 375px) {
   .navbar .container-fluid .logo {
     width: 100%;
@@ -951,6 +947,7 @@ p {
     max-width: 600px;
     height: auto;
     text-align: center;
+    margin: 15px 0 15px 0;
   }
   main .content-inicio .title-paragraph-inicio {
     display: flex;
