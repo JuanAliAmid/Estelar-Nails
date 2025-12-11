@@ -525,10 +525,14 @@ p {
   font-weight: 400;
 }
 
+* {
+  border: 1px solid red;
+}
+
 @media (max-width: 375px) {
   .navbar .container-fluid .logo {
     width: 100%;
-    max-width: 100px;
+    max-width: 100%;
     height: 100%;
     max-height: 80px;
   }
@@ -537,7 +541,7 @@ p {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: none;
+    max-width: 100%;
     height: 100%;
     max-height: 90px;
     gap: 2px;
@@ -567,13 +571,17 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   main .content-inicio {
     width: 100%;
-    max-width: 350px;
+    max-width: 95%;
     height: auto;
+    margin: 5px 0 5px 0;
+    justify-content: center;
     text-align: center;
-    margin: 5px;
   }
   main .content-inicio .title-paragraph-inicio {
     justify-content: center;
@@ -581,16 +589,19 @@ p {
     padding: 5px;
   }
   main .content-inicio .img-inicio {
-    width: 270px;
-    height: 270px;
-    border-radius: 3000px;
-    margin: 5px;
+    width: 100%;
+    height: 290px;
+    border-radius: 50%;
+    display: block;
+    max-width: 100%;
     border: 4px solid #6C043C;
+    margin: 5px 0 5px 0;
   }
   /*----- ↑↑ HOME ↑↑ -----*/
   .contenedor-tye { /*----- ↓↓ TECNICAS Y ESTILOS ↓↓ -----*/
     display: grid;
-    grid-template-columns: 400px;
+    grid-template-columns: 95%;
+    justify-content: center;
     align-content: center;
   }
   .contenedor-tye .cont-img-tye {
@@ -599,7 +610,7 @@ p {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 360px;
+    max-width: 95%;
   }
   .contenedor-tye .cont-img-tye .ol-tye {
     margin: 0 auto;
@@ -684,8 +695,12 @@ p {
   }
   .formulario {
     flex-direction: column;
+    width: 100%;
+    max-width: 360px;
   }
   .formulario .content-de-contacto {
+    width: 100%;
+    max-width: 360px;
     padding: 10px;
   }
   .formulario .content-de-contacto .p-formulario {
@@ -752,7 +767,7 @@ p {
     max-width: 370px;
     height: auto;
     text-align: center;
-    margin-top: 5px;
+    margin: 10px 0 10px 0;
   }
   main .content-inicio .title-paragraph-inicio {
     justify-content: center;
@@ -768,7 +783,7 @@ p {
   main .content-inicio .img-inicio {
     width: 295px;
     height: 295px;
-    border-radius: 3000px;
+    border-radius: 50%;
     margin: 5px;
     border: 4px solid #6C043C;
   }
@@ -784,7 +799,7 @@ p {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 350px;
+    max-width: 95%;
   }
   .contenedor-tye .cont-img-tye .ol-tye {
     margin: 0 auto;
@@ -936,7 +951,6 @@ p {
     max-width: 600px;
     height: auto;
     text-align: center;
-    margin-top: 5px;
   }
   main .content-inicio .title-paragraph-inicio {
     display: flex;
@@ -1108,7 +1122,7 @@ p {
     max-width: 600px;
     height: auto;
     text-align: center;
-    margin-top: 5px;
+    margin: 15px 0 15px 0;
   }
   main .content-inicio .title-paragraph-inicio {
     justify-content: center;
@@ -1129,8 +1143,7 @@ p {
   /*----- ↓↓ TECNICAS Y ESTILOS ↓↓ -----*/
   .contenedor-tye {
     display: grid;
-    grid-template-columns: 400px;
-    align-content: center;
+    grid-template-columns: 100%;
   }
   .contenedor-tye .cont-img-tye {
     display: flex;
@@ -1263,7 +1276,7 @@ p {
     max-width: 900px;
     height: auto;
     text-align: center;
-    margin-top: 5px;
+    margin: 20px 0 20px 0;
   }
   main .content-inicio .title-paragraph-inicio {
     justify-content: center;
@@ -1284,7 +1297,7 @@ p {
   /*----- ↓↓ TECNICAS Y ESTILOS ↓↓ -----*/
   .contenedor-tye {
     display: grid;
-    grid-template-columns: 400px;
+    grid-template-columns: 100%;
     align-content: center;
   }
   .contenedor-tye .cont-img-tye {
@@ -1421,13 +1434,18 @@ p {
     height: 50px;
   }
   /*----- ↓↓ HOME ↓↓ -----*/
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   main .content-inicio {
     display: flex;
     justify-content: space-around;
-    width: 1300px;
+    width: 1200px;
     height: auto;
     text-align: center;
-    margin-top: 5px;
+    margin: 20px 0 20px 0;
   }
   main .content-inicio .title-paragraph-inicio {
     justify-content: center;
@@ -1457,9 +1475,10 @@ p {
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    gap: 0;
-    width: 1300px;
+    width: 100%;
+    max-width: 1200px;
     height: 350px;
+    gap: 0;
   }
   .contenedor-tye .cont-img-tye .imgs-tec-esti {
     max-width: 290px;
@@ -1561,7 +1580,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 850px;
+    width: 700px;
     height: 550px;
     padding: 5px;
     border-radius: 20px;

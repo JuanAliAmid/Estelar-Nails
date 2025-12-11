@@ -3,6 +3,11 @@
 @use '../utilities/variables';
 
 
+
+
+* {
+    border: 1px solid red;
+}
 h2 {
     @extend %h2-general;
 }
@@ -11,12 +16,12 @@ nav {
 }
 @media (max-width: 375px) {
     .navbar .container-fluid .logo {
-        @include mixins.width-height(100px, 100%);
+        @include mixins.width-height(100%, 100%);
         max-height: 80px;
     }
      footer {
         @include mixins.flex(null, center, center);
-        @include mixins.width-height(none, 100%);
+        @include mixins.width-height(100%, 100%);
         max-height: 90px;
         gap: 2px;
         padding: 5px;
@@ -45,19 +50,25 @@ nav {
     }
     main { /*----- ↓↓ HOME ↓↓ -----*/
         @include mixins.flex(column, center, center);
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
         .content-inicio {
-            @include mixins.width-height(350px, auto);
+            @include mixins.width-height(95%, auto);
+            margin: 5px 0 5px 0;
+            justify-content: center;
             text-align: center;
-            margin: 5px;
             .title-paragraph-inicio {
                 justify-content: center;
                 text-align: center;
-                padding: 5px;     
+                padding: 5px;   
             }
             .img-inicio {
-                @include mixins.img-style(null, 270px, 270px, null, 3000px);
-                margin: 5px;
+                @include mixins.img-style(null, 100%, 290px, null, 50%);
+                display: block;
+                max-width: 100%;
                 border: 4px solid #6C043C;
+                margin: 5px 0 5px 0;
             }    
         }
     } /*----- ↑↑ HOME ↑↑ -----*/
@@ -65,11 +76,12 @@ nav {
    
     .contenedor-tye { /*----- ↓↓ TECNICAS Y ESTILOS ↓↓ -----*/
         display: grid;
-        grid-template-columns: 400px;
+        grid-template-columns: 95%;
+        justify-content: center;
         align-content: center;
         .cont-img-tye {
             @include mixins.flex(column, center, center);
-            @include mixins.width-height(360px, null);
+            @include mixins.width-height(95%, null);
             .ol-tye {
                 margin: 0 auto;
             }
@@ -156,7 +168,11 @@ nav {
     }
     .formulario {
         flex-direction: column;
+        width: 100%;
+        max-width: 360px;
         .content-de-contacto {
+            width: 100%;
+            max-width: 360px;
             padding: 10px;
             .p-formulario {
                 width: 100%;
@@ -216,7 +232,7 @@ nav {
         .content-inicio {
             @include mixins.width-height(370px, auto);
             text-align: center;
-            margin-top: 5px;
+            margin: 10px 0 10px 0;
             .title-paragraph-inicio {
                 justify-content: center;
                 text-align: center;
@@ -229,7 +245,7 @@ nav {
                 }
             }
             .img-inicio {
-                @include mixins.img-style(null, 295px, 295px, null, 3000px);
+                @include mixins.img-style(null, 295px, 295px, null, 50%);
                 margin: 5px;
                 border: 4px solid #6C043C;
             }    
@@ -243,7 +259,7 @@ nav {
         align-content: center;
         .cont-img-tye {
             @include mixins.flex(column, center, center);
-            @include mixins.width-height(350px, null);
+            @include mixins.width-height(95%, null);
             .ol-tye {
                 margin: 0 auto;
             }
@@ -382,7 +398,6 @@ nav {
             @include mixins.flex(null, center, center);
             @include mixins.width-height(600px, auto);
             text-align: center;
-            margin-top: 5px;
             .title-paragraph-inicio {
                 @include mixins.flex(null, center, center);
                 padding: 5px;
@@ -547,7 +562,7 @@ nav {
             @include mixins.flex(null, center, null);
             @include mixins.width-height(600px, auto);
             text-align: center;
-            margin-top: 5px;
+            margin: 15px 0 15px 0;
             .title-paragraph-inicio {
                 justify-content: center;
                 text-align: center;
@@ -568,8 +583,7 @@ nav {
     /*----- ↓↓ TECNICAS Y ESTILOS ↓↓ -----*/
     .contenedor-tye { 
         display: grid;
-        grid-template-columns: 400px;
-        align-content: center;
+        grid-template-columns: 100%;
         .cont-img-tye {
             @include mixins.flex(row, center, center);
             width: 850px;
@@ -699,7 +713,7 @@ nav {
             @include mixins.flex(null, center, null);
             @include mixins.width-height(900px, auto);
             text-align: center;
-            margin-top: 5px;
+            margin: 20px 0 20px 0;
             .title-paragraph-inicio {
                 justify-content: center;
                 text-align: center;
@@ -720,7 +734,7 @@ nav {
     /*----- ↓↓ TECNICAS Y ESTILOS ↓↓ -----*/
     .contenedor-tye { 
         display: grid;
-        grid-template-columns: 400px;
+        grid-template-columns: 100%;
         align-content: center;
         .cont-img-tye {
             @include mixins.flex(row, center, center);
@@ -857,13 +871,14 @@ nav {
             
     }
     /*----- ↓↓ HOME ↓↓ -----*/
-    main { 
+    main {
+        @include mixins.flex(column, null, center);
         .content-inicio {
             @include mixins.flex(null, space-around, null);
-            width: 1300px;
+            width: 1200px;
             height: auto;
             text-align: center;
-            margin-top: 5px;
+            margin: 20px 0 20px 0;
             .title-paragraph-inicio {
                 justify-content: center;
                 text-align: center;
@@ -889,9 +904,8 @@ nav {
         align-content: center;
         .cont-img-tye {
             @include mixins.flex(row, start, center);
-            gap: 0;
-            width: 1300px;
-            height: 350px;  
+            @include mixins.width-height(1200px, 350px);
+            gap: 0;  
             .imgs-tec-esti{
                 max-width: 290px;
                 height: 290px;
@@ -985,7 +999,7 @@ nav {
     }
     .mapa {
         @include mixins.flex (null, center, center);
-        width: 850px;
+        width: 700px;
         height: 550px;
         padding: 5px;
         border-radius: 20px;
