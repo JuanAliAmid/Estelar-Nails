@@ -224,6 +224,7 @@ nav {
     main { /*----- ↓↓ HOME ↓↓ -----*/
         @include mixins.flex(column, null, null);
         place-items: center;
+        overflow-x: hidden;
         .content-inicio {
             @include mixins.width-height(370px, auto);
             text-align: center;
@@ -388,7 +389,8 @@ nav {
     /*----- ↓↓ HOME ↓↓ -----*/
     main {
         @include mixins.flex(column, null, null);
-        place-items: center;  
+        place-items: center;
+        overflow-x: hidden;
         .content-inicio {
             @include mixins.flex(null, center, center);
             @include mixins.width-height(600px, auto);
@@ -554,6 +556,7 @@ nav {
     main {
         @include mixins.flex(column, null, null);
         place-items: center;
+        overflow-x: hidden;
         .content-inicio {
             @include mixins.flex(null, center, null);
             @include mixins.width-height(600px, auto);
@@ -705,6 +708,7 @@ nav {
     main {
         @include mixins.flex(column, null, null);
         place-items: center;
+        overflow-x: hidden;
         .content-inicio {
             @include mixins.flex(null, center, null);
             @include mixins.width-height(900px, auto);
@@ -869,6 +873,7 @@ nav {
     /*----- ↓↓ HOME ↓↓ -----*/
     main {
         @include mixins.flex(column, null, center);
+        overflow-x: hidden;
         .content-inicio {
             @include mixins.flex(null, space-around, null);
             width: 1200px;
