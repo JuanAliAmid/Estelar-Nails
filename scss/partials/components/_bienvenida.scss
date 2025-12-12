@@ -1,43 +1,41 @@
 @use '../utilities/mixins';
 @use '../utilities/variables';
 
+/*----------↓↓ INICIO ↓↓ ----------*/
 @keyframes efect-disco {
     0% { transform: rotateZ(0deg); }
     100% { transform: rotateZ(360deg); }
 }
-.content-inicio { /*----------↓↓ INICIO ↓↓ ----------*/
-    @include mixins.flex (row, space-between, center);
+.content-inicio { 
+    @include mixins.flex(row, space-between, center);
     flex-wrap: wrap;
     border: 6px solid #6C043C;
     border-radius: 40px;
     margin: 70px 40px 70px 40px;
     height: 530px;
     padding: 0px 30px;
-        .img-inicio {
-            @include mixins.img-style(null, 100%, 600px, cover, 1000px);
-            display: flex;
-            max-width: 600px;
-            flex-wrap: wrap;
-            border: 6px solid #6C043C;
-            margin-top: -50px;
-            margin-bottom: -50px;
-
-            &:hover {
-                animation-name: efect-disco;
-                animation-duration: 5s;
-                animation-iteration-count: infinite;
-                animation-timing-function: ease-in;
-            }
+    .img-inicio {
+        @include mixins.img-style(null, 100%, 600px, cover, 1000px);
+        display: flex;
+        max-width: 600px;
+        flex-wrap: wrap;
+        border: 6px solid #6C043C;
+        margin-top: -50px;
+        margin-bottom: -50px;
+        &:hover {
+            animation-name: efect-disco;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
         }
-        .title-paragraph-inicio {
-            @include mixins.flex(column, null, null);
-            padding-left: 30px;
-            width: 100%;
-            max-width: 1100px;
-            text-align: start;
-            gap: 10px;
-
-        }
+    }
+    .title-paragraph-inicio {
+        @include mixins.flex(column, null, null);
+        @include mixins.width-height(1100px, null);
+        padding-left: 30px;
+        text-align: start;
+        gap: 10px;
+    }
 }
 /*----------↑↑ INICIO ↑↑----------*/
 

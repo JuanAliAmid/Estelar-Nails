@@ -2,18 +2,15 @@
 
 footer { /*----------↓↓ FOOTER ↓↓----------*/
     @include mixins.flex(null, center, center);
+    @include mixins.width-height(1000px, null);
     background-color: #B690A1;
-    width: 100%;
-    max-width: 1000px;
     margin: 0 auto;
     border-radius: 20px;
     border:solid 3px #6C043C;
     gap: 30px;
     background-image: linear-gradient(to left, #af708b, #944d6d);
     .content-text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include mixins.flex(null, center, center);
         height: 100%;
         .p-footer {
             font-size: 20px;
@@ -21,26 +18,20 @@ footer { /*----------↓↓ FOOTER ↓↓----------*/
             margin: 0;
         }
     }
-
-        .container-img-footer {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-            .imgs-footer {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                width: 100%;
-                max-width: 60px;
-                height: 100%;
-                max-height: 60px;
-                margin: 0;
-                &:hover {
-                    transform: scale(1.06);  
-                }
+    .container-img-footer {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        .imgs-footer {
+            @include mixins.flex(row, null, center);
+            @include mixins.width-height(60px, 100%);
+            max-height: 60px;
+            margin: 0;
+            &:hover {
+                transform: scale(1.06);  
             }
         }
-
+    }
 }/*-----------↑↑ FOOTER ↑↑----------*/
 
 

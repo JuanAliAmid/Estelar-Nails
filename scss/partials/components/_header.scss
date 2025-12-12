@@ -1,7 +1,7 @@
-  
+@use "../utilities/mixins";
+
 .navbar { /*----------↓↓ HEADER ↓↓----------*/
     padding: 0;
-
     .container-fluid {
         display: flex;
         margin-top: 0;
@@ -10,13 +10,8 @@
         border-bottom: 3px solid #6C043C;
         background-image: linear-gradient(to left, #92697c, #6e3a56);
         height: auto;
-
         .logo {
-            width: 100%;
-            max-width: 150px;
-            height: 90px;
-            
-
+            @include mixins.width-height(150px, 90px);
             &:hover {
                 transform: scale(1.1);
                 transition: transform 0.3s;
@@ -26,20 +21,17 @@
             width: 35px;
             height: 35px;
         }
-
         .navbar-nav {
             display: flex;
             justify-content: flex-end;
             width: 100%;
             margin: 0 ;
             padding: 0 ;
-
             ul {
                 display: flex;
                 gap: 25px;
                 list-style-type: none;
             }    
-
             .nav-link {
                 color: #F7F0EB;
                 &:hover {
@@ -52,9 +44,7 @@
             .nav-link.active {
                 color: #F2E2C4;
                 transform: scale(1.1);
-            }
-                    
-                
+            }      
         }
     }
 }   /*----------↑↑ HEADER ↑↑----------*/

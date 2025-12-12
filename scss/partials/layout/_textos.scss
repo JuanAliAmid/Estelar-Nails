@@ -1,7 +1,8 @@
 @use '../utilities/mixins';
 @use '../utilities/extend';
 
-.texto-tecnicas {  /*----------↓↓ NUESTROS TRABAJOS ↓↓----------*/
+/*----------↓↓ NUESTROS TRABAJOS ↓↓----------*/
+.texto-tecnicas {  
     @include mixins.flex(column, center, center);
     text-align: center;
     @include mixins.width-height(650px, 600px);
@@ -16,14 +17,10 @@
         margin: 0 4px 0 4px;
     }
     .ul-tecnica {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include mixins.flex(column, center, center);
         padding-left: 0;
         margin-left: 0;
         gap: 8px;
-
         li {
             margin: 0 3px 0 3px;
             text-align: center;

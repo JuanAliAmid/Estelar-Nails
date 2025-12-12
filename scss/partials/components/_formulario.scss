@@ -1,6 +1,7 @@
 @use '../utilities/mixins';
 
-.h2-formulario { /*---------- ↓↓ FORMULARIO ↓↓ ----------*/
+/*---------- ↓↓ FORMULARIO ↓↓ ----------*/
+.h2-formulario { 
     text-align: center;
 }
 .presentación-formulario {
@@ -14,69 +15,62 @@
 .formulario { 
     @include mixins.flex (row, space-around, center);
     margin: 30px;
-
-        .content-de-contacto {
-            @include mixins.flex (column, center, center);
-
-            form {
-                @include mixins.flex (column, center, null);
-                @include mixins.width-height(350px, 300px);
-                margin: 20px;
-                gap: 10px;
-
-                .contenedor-label {
-                    @include mixins.flex (row, null, null);
-                    @include mixins.width-height(350px, null);        
-
-                    label {
-                        font-size: 20px;
-                        margin: 10px;
-                        width: 150px; 
-                            
-                        textarea {
-                            width: 300px;
-                            height: 100px;
-                        }
-                    }    
-                }
-                .boton-enviar {
-                    @include mixins.flex(null, center, center);
-                    color: #F7F0EB;
-                    border-radius: 10px;
-                    font-size: 15px;
-                    background-color: #883b64;
-                    height: 30px;
-                    cursor: pointer;
-                    &:hover {
-                        transition: 0.40s;
-                        background-color: #bb5e90;
-                        color: black;
-                        transform: scale(1.06);  /* agranda al pasar el puntero */
+    .content-de-contacto {
+        @include mixins.flex (column, center, center);
+        form {
+            @include mixins.flex (column, center, null);
+            @include mixins.width-height(350px, 300px);
+            margin: 20px;
+            gap: 10px;
+            .contenedor-label {
+                @include mixins.flex (row, null, null);
+                @include mixins.width-height(350px, null);        
+                label {
+                    font-size: 20px;
+                    margin: 10px;
+                    width: 150px;     
+                    textarea {
+                        width: 300px;
+                        height: 100px;
                     }
-                }
-                
+                }    
             }
-            .p-formulario {
-                display: flex;
-                width: 500px;
-                text-align: center;
-            } 
-            
+            .boton-enviar {
+                @include mixins.flex(null, center, center);
+                color: #F7F0EB;
+                border-radius: 10px;
+                font-size: 15px;
+                background-color: #883b64;
+                height: 30px;
+                cursor: pointer;
+                &:hover {
+                    transition: 0.40s;
+                    background-color: #bb5e90;
+                    color: black;
+                    transform: scale(1.06);  /* agranda al pasar el puntero */
+                }
+            }    
+        }
+        .p-formulario {
+            display: flex;
+            width: 500px;
+            text-align: center;
         } 
+            
+    } 
 }
 .mapa {
+    @include mixins.width-height(1000px, 100%);
     border: 5px solid #6C043C;
     padding: 5px;
-    width: 1000px;
-    height: 100%;
     max-height: 900px;
     border-radius: 30px;
-
     iframe {
         @include mixins.width-height(1000px, 550px);
         border-radius: 30px;
     }
-} /*---------- ↑↑ FORMULARIO ↑↑ ----------*/
+} 
+/*---------- ↑↑ FORMULARIO ↑↑ ----------*/
 
 
  
