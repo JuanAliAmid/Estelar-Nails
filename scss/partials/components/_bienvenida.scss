@@ -3,25 +3,37 @@
 
 /*----------↓↓ INICIO ↓↓ ----------*/
 @keyframes efect-disco {
-    0% { transform: rotateZ(0deg); }
-    100% { transform: rotateZ(360deg); }
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
 }
-.content-inicio { 
+
+.content-inicio {
     @include mixins.flex(row, space-between, center);
     flex-wrap: wrap;
+    background-color: rgba(31, 3, 59, 0.7);
+    backdrop-filter: blur(2px);
+    box-shadow: variables.$main-degradado;
     border: 6px solid #6C043C;
     border-radius: 40px;
     margin: 70px 40px 70px 40px;
     height: 530px;
     padding: 0px 30px;
+
     .img-inicio {
         @include mixins.img-style(null, 100%, 600px, cover, 1000px);
         display: flex;
         max-width: 600px;
         flex-wrap: wrap;
         border: 6px solid #6C043C;
+        box-shadow: 0 0 20px #640354, 0 0 10px rgb(248, 7, 236);
         margin-top: -50px;
         margin-bottom: -50px;
+
         &:hover {
             animation-name: efect-disco;
             animation-duration: 5s;
@@ -29,6 +41,7 @@
             animation-timing-function: ease-in;
         }
     }
+
     .title-paragraph-inicio {
         @include mixins.flex(column, null, null);
         @include mixins.width-height(1100px, null);
@@ -37,5 +50,5 @@
         gap: 10px;
     }
 }
-/*----------↑↑ INICIO ↑↑----------*/
 
+/*----------↑↑ INICIO ↑↑----------*/

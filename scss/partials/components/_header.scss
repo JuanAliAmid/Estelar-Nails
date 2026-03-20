@@ -1,39 +1,52 @@
 @use "../utilities/mixins";
 
-.navbar { /*----------↓↓ HEADER ↓↓----------*/
+.navbar {
+    /*----------↓↓ HEADER ↓↓----------*/
     padding: 0;
+
     .container-fluid {
         display: flex;
         margin-top: 0;
-        background-color: #B690A1;
+        background-color: rgba(31, 3, 59, 0.7);
+        box-shadow: 0 0 10px #640354, 0 0 5px rgb(248, 7, 236);
+        backdrop-filter: blur(2px);
         font-size: 20px;
         border-bottom: 3px solid #6C043C;
-        background-image: linear-gradient(to left, #92697c, #6e3a56);
+        //background-image: linear-gradient(to left, #92697c, #6e3a56);
         height: auto;
+
         .logo {
             @include mixins.width-height(150px, 90px);
+
             &:hover {
                 transform: scale(1.1);
                 transition: transform 0.3s;
             }
         }
+
         .navbar-svg {
             width: 35px;
             height: 35px;
         }
+
         .navbar-nav {
+
             display: flex;
             justify-content: flex-end;
             width: 100%;
-            margin: 0 ;
-            padding: 0 ;
+            margin: 0;
+            padding: 0;
+
             ul {
                 display: flex;
                 gap: 25px;
                 list-style-type: none;
-            }    
+            }
+
             .nav-link {
                 color: #F7F0EB;
+                cursor: pointer;
+
                 &:hover {
                     display: inline-block;
                     transition: 0.3s;
@@ -41,17 +54,13 @@
                     transform: scale(1.1);
                 }
             }
+
             .nav-link.active {
                 color: #F2E2C4;
                 transform: scale(1.1);
-            }      
+            }
         }
     }
-}   /*----------↑↑ HEADER ↑↑----------*/
+}
 
-  
-
-
-
-
-
+/*----------↑↑ HEADER ↑↑----------*/

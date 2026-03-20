@@ -1,9 +1,11 @@
 @use './mixins';
+
 %h1-general {
-    font-weight: 700;
+  font-weight: 700;
 }
+
 %h2-general {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 %nav-mobile {
@@ -24,8 +26,8 @@
 }
 
 %footer-base {
-    @include mixins.flex(null, center, center);
-    width: 100%;
-    padding: 5px;
-    gap: 10px;
+  @include mixins.flex(null, center, center);
+  width: 100%;
+  padding: 5px;
+  gap: 10px;
 }

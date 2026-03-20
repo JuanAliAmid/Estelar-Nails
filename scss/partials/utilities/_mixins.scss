@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
-    align-items: $align; 
+    align-items: $align;
 }
 
-@mixin img-style ($transition, $width, $height, $fit, $radius){
-    transition: $transition; 
+@mixin img-style ($transition, $width, $height, $fit, $radius) {
+    transition: $transition;
     width: $width;
     height: $height;
     object-fit: $fit;
@@ -18,4 +18,3 @@
     max-width: $max;
     height: $height;
 }
-

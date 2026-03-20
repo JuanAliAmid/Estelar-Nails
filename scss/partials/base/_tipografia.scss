@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap');
 
 body {
-    background-color: #F7F0EB;
+    background-image: url('../assets/estrellas.png');
+    background-attachment: fixed;
+    background-size: cover; // estira la imagen para que cubra toda la pantalla sin dejar espacios en blanco
+    background-position: center;//centra la imagen en la pantalla
+    background-repeat: no-repeat; // evita que la imagen se repita en mosaico si es más chica que la pantalla
+    background-attachment: fixed; // la imagen queda fija mientras scrolleás, el contenido pasa por encima pero el fondo no se mueve
     font-family: "Corben", serif;
 }

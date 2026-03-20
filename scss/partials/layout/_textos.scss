@@ -2,25 +2,30 @@
 @use '../utilities/extend';
 
 /*----------↓↓ NUESTROS TRABAJOS ↓↓----------*/
-.texto-tecnicas {  
+.texto-tecnicas {
     @include mixins.flex(column, center, center);
     text-align: center;
     @include mixins.width-height(650px, 600px);
     margin: 30px auto 0 auto;
     padding: 30px;
     gap: 20px;
-} 
+}
+
 .guia-tecnica {
     gap: 10px;
+
     .p-tecnica {
         text-align: center;
         margin: 0 4px 0 4px;
     }
+
     .ul-tecnica {
         @include mixins.flex(column, center, center);
-        padding-left: 0;
-        margin-left: 0;
+        padding-left: 2px;
+        margin-left: 2px;
+        color: #E8D5F5;
         gap: 8px;
+
         li {
             margin: 0 3px 0 3px;
             text-align: center;
@@ -33,6 +38,5 @@
         }
     }
 }
+
 /*----------↑↑ NUESTROS TRABAJOS ↑↑----------*/
-
-
