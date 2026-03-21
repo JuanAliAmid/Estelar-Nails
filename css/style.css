@@ -253,7 +253,7 @@ nav ul {
 }
 
 #seleccion #lista-seleccionadas li {
-  color: #E8D5F5 !important;
+  color: #E8D5F5;
   -webkit-text-fill-color: #E8D5F5;
 }
 
