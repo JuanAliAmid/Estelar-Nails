@@ -89,3 +89,125 @@
 }
 
 /*---------- ↑↑ FORMULARIO ↑↑ ----------*/
+
+@media (max-width: 375px) {
+    h2 {
+        margin-top: 5px;
+    }
+
+    .formulario {
+        flex-direction: column;
+        width: 100%;
+        max-width: 360px;
+
+        .content-de-contacto {
+            width: 100%;
+            max-width: 360px;
+            padding: 10px;
+
+            .p-formulario {
+                width: 100%;
+            }
+        }
+    }
+
+    .mapa {
+        @include mixins.flex(null, center, center);
+        @include mixins.width-height(350px, 350px);
+        padding: 5px;
+        border-radius: 20px;
+
+        iframe {
+            @include mixins.width-height(null, 100%);
+            margin: 5px;
+            border-radius: 20px;
+        }
+    }
+}
+
+@media (min-width: 376px) and (max-width: 576px) {
+    .formulario {
+        flex-direction: column;
+
+        .content-de-contacto {
+            width: 500px;
+            padding: 10px;
+        }
+    }
+
+    .mapa {
+        @include mixins.width-height(360px, 400px);
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .formulario {
+        flex-direction: column;
+        align-items: center;
+
+        .content-de-contacto {
+            width: 500px;
+        }
+    }
+
+    .mapa {
+        @include mixins.width-height(730px, 500px);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .formulario {
+
+        .content-de-contacto {
+            padding: 10px;
+
+            .p-formulario {
+                width: 100%;
+
+            }
+        }
+    }
+
+    .mapa {
+        max-width: 800px;
+        height: 550px;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .formulario {
+        .content-de-contacto {
+            padding: 10px;
+        }
+    }
+
+    .mapa {
+        width: 850px;
+        height: 550px;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .formulario {
+        flex-direction: row;
+        align-items: center;
+
+        .content-de-contacto {
+            padding: 10px;
+        }
+    }
+
+    .mapa {
+        width: 700px;
+        height: 550px;
+
+        iframe {
+            @include mixins.width-height(null, 100%);
+        }
+    }
+}

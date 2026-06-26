@@ -52,3 +52,116 @@
 }
 
 /*----------↑↑ INICIO ↑↑----------*/
+
+@media (max-width: 375px) {
+    .content-inicio {
+        @include mixins.width-height(95%, auto);
+        margin: 5px 0 5px 0;
+        justify-content: center;
+        text-align: center;
+
+        .title-paragraph-inicio {
+            justify-content: center;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .img-inicio {
+            @include mixins.img-style(null, 100%, 290px, null, 50%);
+            display: block;
+            max-width: 100%;
+            border: 4px solid #6C043C;
+            margin: 5px 0 5px 0;
+        }
+    }
+}
+
+@media (min-width: 376px) and (max-width: 576px) {
+    .content-inicio {
+        @include mixins.width-height(370px, auto);
+        margin: 10px 0 10px 0;
+
+        .title-paragraph-inicio {
+
+            h2 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+
+        .img-inicio {
+            @include mixins.img-style(null, 295px, 295px, null, 50%);
+            margin: 5px;
+            border: 4px solid #6C043C;
+        }
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .content-inicio {
+        @include mixins.flex(null, center, center);
+        @include mixins.width-height(600px, auto);
+        margin: 15px 0 15px 0;
+
+        .title-paragraph-inicio {
+            @include mixins.flex(null, center, center);
+            padding: 5px;
+        }
+
+        .img-inicio {
+            @include mixins.img-style(null, 400px, 400px, null, 3000px);
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .content-inicio {
+        @include mixins.flex(null, center, null);
+
+        .title-paragraph-inicio {
+            justify-content: center;
+            text-align: center;
+        }
+
+        .img-inicio {
+            margin: 5px;
+        }
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+
+    .content-inicio {
+        @include mixins.flex(null, center, null);
+        @include mixins.width-height(900px, auto);
+        margin: 20px 0 20px 0;
+
+        .title-paragraph-inicio {
+            justify-content: center;
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .content-inicio {
+        @include mixins.flex(null, space-around, null);
+        width: 1200px;
+        height: auto;
+        margin: 20px 0 20px 0;
+
+        .title-paragraph-inicio {
+            justify-content: center;
+            text-align: center;
+            width: 600px;
+        }
+
+        .img-inicio {
+            @include mixins.img-style (null, 500px, 500px, null, 3000px);
+
+        }
+    }
+}

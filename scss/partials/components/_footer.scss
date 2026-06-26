@@ -5,10 +5,8 @@ footer {
     /*----------↓↓ FOOTER ↓↓----------*/
     @include mixins.flex(null, center, center);
     @include mixins.width-height(1000px, null);
-    background-color: rgba(31, 3, 59, 0.7);
     backdrop-filter: blur(2px);
     box-shadow: variables.$main-degradado;
-
     margin: 0 auto;
     border-radius: 20px;
     border: solid 3px #6C043C;
@@ -45,3 +43,86 @@ footer {
 }
 
 /*-----------↑↑ FOOTER ↑↑----------*/
+@media (max-width: 375px) {
+    footer {
+        @include mixins.flex(null, center, center);
+        @include mixins.width-height(100%, 100%);
+        max-height: 90px;
+        gap: 2px;
+        padding: 5px;
+
+        .content-text {
+            display: flex;
+            place-items: center;
+
+            .p-footer {
+                font-size: 13px;
+                text-align: center;
+                margin-bottom: 0;
+            }
+        }
+
+        .container-img-footer {
+            .imgs-footer {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+@media (min-width: 376px) and (max-width: 576px) {
+    footer {
+
+        .p-footer {
+            font-size: 15px;
+        }
+    }
+}
+
+
+@media (min-width: 577px) and (max-width: 768px) {
+    footer {
+        @include mixins.flex(null, space-around, center);
+        text-align: center;
+        padding: 5px
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    footer {
+        @include mixins.width-height(850px, 55px);
+        gap: 2px;
+
+        .content-text {
+            display: flex;
+            place-items: center;
+
+            .p-footer {
+                font-size: 17px;
+                text-align: center;
+                margin-bottom: 0;
+            }
+        }
+
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+    footer {
+        @include mixins.width-height(900px, 100%);
+        max-height: 90px;
+        gap: 10px;
+
+        .p-footer {
+            font-size: 17px;
+        }
+
+        .container-img-footer {
+            .imgs-footer {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
